@@ -8,8 +8,6 @@
 </head>
 <body>
 
-	<h1>ayyyy what up G</h1>
-
 	
 
 </body>
