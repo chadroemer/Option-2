@@ -7,9 +7,7 @@
 </head>
 <body>
 
-<h1>sweet</h1>
-	 <h2> where am i </h2>
-	 	<p>This paragraph was made by Cole</p>
+
 
 
 </body>
