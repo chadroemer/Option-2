@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +12,6 @@
 
 </body>
 </html>
-=======
+
 	<h1>sweet</h1>
->>>>>>> 88b4acccbdc379b219e185a970715cc7a996b23f
+
