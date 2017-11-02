@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
-@import url('https://fonts.googleapis.com/css?family=Cormorant+SC');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body{
 	background-color: #491799;
@@ -17,7 +17,7 @@ button{
 #index_MainBlock{
 	margin-left: 15%;
 	margin-right: 15%;
-	margin-top: 3%;
+	margin-top: 2%;
 	background-color: black;
 	border-radius: 3px;
 	border: 2px solid black;
@@ -58,9 +58,10 @@ button{
 }
 
 p{
-	font-family: Bitter;
+	font-family: Open Sans;
 	padding-left: 5%; 
 	padding-right: 5%;
+	font-size: 15px;
 }
 
 
