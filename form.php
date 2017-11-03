@@ -6,7 +6,7 @@
 	<link href="https://fonts.googleapis.com/css">
 	<link rel="icon" href="photos/green.png">
 	<link rel="stylesheet" type="text/css" href="option2.css">
-	<title>Green Fee</title>
+	<title>Application Form</title>
 </head>
 <body>
  	
