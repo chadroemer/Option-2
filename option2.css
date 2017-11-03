@@ -13,6 +13,10 @@ button{
 	font-size: 20px;
 }
 
+span{
+	color: #067c14;
+}
+
 .Button{
 	float: right;
 	padding-right: 2%;
@@ -55,8 +59,10 @@ button{
 }
 
 #greenFeeh2{
+	margin-top: 0%;
 	padding-left: 2%;
 	color: #067c14;
+	font-size: 30px;
 }
 
 #contactInfo{
