@@ -11,6 +11,7 @@ body{
 
 button{
 	font-size: 20px;
+	position: absolute;
 }
 
 span{
@@ -21,6 +22,7 @@ span{
 	float: right;
 	padding-right: 2%;
 	margin-top: -5%;
+	margin-right: 10%;
 }
 
 #header{
@@ -60,7 +62,7 @@ span{
 
 #introHr{
 	width: 75%;
-	border: 2px solid #491799;
+	border: 1.5px solid #491799;
 }
 
 #credit{
