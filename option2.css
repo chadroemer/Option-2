@@ -23,17 +23,6 @@ span{
 	margin-top: -5%;
 }
 
-#index_MainBlock{
-	margin-left: 15%;
-	margin-right: 15%;
-	background-color: black;
-	border-radius: 3px;
-	border: 2px solid black;
-   /* -webkit-box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);
-	-moz-box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);
-	box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);*/
-}
-
 #header{
 	width: 100%;
 	background-color: #4B08A1;
