@@ -9,10 +9,6 @@ body{
 	margin: 0%;
 }
 
-#header{
-		
-}
-
 button{
 	font-size: 20px;
 }
@@ -55,7 +51,7 @@ button{
 	background-color: white;
 	margin-left: 15%;
 	margin-right: 15%;
-	box-shadow: 0 0 20px .5px #33056d;
+	box-shadow: 0 0 15px .5px #33056d;
 }
 
 #greenFeeh2{
