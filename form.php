@@ -37,7 +37,6 @@
 		    <li><a href="#tabs-3">Form Tab 3</a></li>
 		  </ul>
 		  <div id="tabs-1">
-		  <p><strong>Click this tab again to close the content pane.</strong></p>
 			
 			<form id="FormTab1">
 				<p>Project Title</p>
@@ -76,35 +75,14 @@
 
 		  </div>
 		  <div id="tabs-2">
-		    <p><strong>Click this tab again to close the content pane.</strong></p>
+		    <p><strong>As a Student, Choose One of These Options:</strong></p>
 		    <form id="FormTab1">
-				<p>Project Title:</p>
-				<hr>
-				<input type="text" name="projectTitle" id="inputSize" required>
-
-				<p>Total Amount Requested:</p>
-				<hr>
-				<input type="text" name="Amount" id="inputSize" required>
-
-				<p>Name and Title of Primary Contact:</p>
-				<hr>
-				<input type="text" name="Contact" id="inputSize" required> 
-
-				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
-				<hr>
-				<input type="text" name="campusAffiliation" id="inputSize" required>
-
-				<p>Email Address:</p>
-				<hr>
-				<input type="text" name="email" id="inputSize" required>
-
-				<p>Cell and/or Work Phone Number(s):</p>
-				<hr>
-				<input type="text" name="phoneContact" id="inputSize" required>
-
-				<br><br><br>
+		    	<hr>
+				  	<input type="radio" name="ideaOrigin" value="one">This Project is Soley My Own.<br><br>
+  					<input type="radio" name="ideaOrigin" value="group">This Project is Proposed on Behalf of a Group.<br>
 			</form>
 		  </div>
+
 		  <div id="tabs-3">
 		    <p><strong>Click this tab again to close the content pane.</strong></p>
 		    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
