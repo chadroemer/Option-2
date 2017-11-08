@@ -35,41 +35,42 @@
 		    <li><a href="#tabs-1">Form Tab 1</a></li>
 		    <li><a href="#tabs-2">Form Tab 2</a></li>
 		    <li><a href="#tabs-3">Form Tab 3</a></li>
+		    <li><a href="#tabs-4">Form Tab 4</a></li>
 		  </ul>
 		  <div id="tabs-1">
 			
 			<form id="FormTab1">
 				<p>Project Title</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
 
 				<p>Total Amount Requested</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="Amount" id="inputSize" required>
 
 				<p>Name and Title of Primary Contact</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="Contact" id="inputSize" required> 
 
 				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="campusAffiliation" id="inputSize" required>
 
 				<p>Email Address:</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="email" id="inputSize" required>
 
 				<p>Cell and/or Work Phone Number(s):</p>
-				<hr>
+				<hr id="formHr">
 				<input type="text" name="phoneContact" id="inputSize" required>
 
 				<p>Status:</p>
-				<hr>
+				<hr id="formHr">
 				  	<input type="radio" name="status" value="student">Student<br>
   					<input type="radio" name="status" value="staff">Staff<br>
   					<input type="radio" name="status" value="other">Other
 
-				<br><br><br>
+				<br><br>
 			</form>
 
 
@@ -77,18 +78,46 @@
 		  <div id="tabs-2">
 		    <p><strong>As a Student, Choose One of These Options:</strong></p>
 		    <form id="FormTab1">
-		    	<hr>
+		    	<hr id="formHr">
 				  	<input type="radio" name="ideaOrigin" value="one">This Project is Soley My Own.<br><br>
   					<input type="radio" name="ideaOrigin" value="group">This Project is Proposed on Behalf of a Group.<br>
 			</form>
 		  </div>
 
 		  <div id="tabs-3">
-		    <p><strong>Click this tab again to close the content pane.</strong></p>
-		    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-		  </div>
-		</div>
+		    <p>Name of Group(student org., campus dept., etc.):</p>
+				<hr id="formHr">
+				<input type="text" name="groupName" id="inputSize" required>
 
+				<p>Name of Faculty or Staff Project Advisor: </p>
+				<hr id="formHr">
+				<input type="text" name="staffAdvisor" id="inputSize" required>
+
+				<p>Advisor's Email Address:</p>
+				<hr id="formHr">
+				<input type="text" name="advisorEmail" id="inputSize" required> 
+
+				<p>Advisor's Department or Organization:</p>
+				<hr id="formHr">
+				<input type="text" name="advisorDept" id="inputSize" required>
+
+				<p>Advisor's Phone Number(s): </p>
+				<hr id="formHr">
+				<input type="text" name="advisorPhone" id="inputSize" required>
+		  </div>
+
+		  <div id="tabs-4">
+		    	<p><strong>Instructions:</strong> Please fill in answers to the the following 10 questions. You may copy and paste your text from another document, if you wish. </p>
+		    	<hr id="formHr"> 
+		    	<br>
+
+		    	<p class="tab4p"><strong>1. Project Description</strong></p>
+		    	<p>Provide a summary of your project:</p>
+		    	<hr id="formHr">
+		    	<input type="text" name="projectSummary" class="tab4text">
+		  </div>
+
+		</div>
 
 </div>
 
