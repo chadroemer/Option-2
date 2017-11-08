@@ -15,8 +15,12 @@
 	</div>
 
 	<div id="greenFeeIntro">
+<<<<<<< HEAD
 		 
 		 
+=======
+		
+>>>>>>> 3a374ea0b11545d8dabcb17bda0a9a157ec862e3
 	</div>
 
 </body>
