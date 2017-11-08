@@ -9,29 +9,20 @@ body{
 	margin: 0%;
 }
 
-#header{
-		
-}
-
 button{
 	font-size: 20px;
+	position: absolute;
+}
+
+span{
+	color: #067c14;
 }
 
 .Button{
 	float: right;
 	padding-right: 2%;
 	margin-top: -5%;
-}
-
-#index_MainBlock{
-	margin-left: 15%;
-	margin-right: 15%;
-	background-color: black;
-	border-radius: 3px;
-	border: 2px solid black;
-   /* -webkit-box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);
-	-moz-box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);
-	box-shadow: 8px 42px 300px 63px rgba(0,0,0,0.75);*/
+	margin-right: 10%;
 }
 
 #header{
@@ -55,12 +46,14 @@ button{
 	background-color: white;
 	margin-left: 15%;
 	margin-right: 15%;
-	box-shadow: 0 0 20px .5px #33056d;
+	box-shadow: 0 0 15px .5px #33056d;
 }
 
 #greenFeeh2{
+	margin-top: 0%;
 	padding-left: 2%;
 	color: #067c14;
+	font-size: 30px;
 }
 
 #contactInfo{
@@ -69,7 +62,7 @@ button{
 
 #introHr{
 	width: 75%;
-	border: 2px solid #491799;
+	border: 1.5px solid #491799;
 }
 
 #credit{
