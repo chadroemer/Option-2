@@ -18,6 +18,10 @@ span{
 	color: #067c14;
 }
 
+#inputSize{
+	width: 100%;
+}
+
 .Button{
 	float: right;
 	padding-right: 2%;
