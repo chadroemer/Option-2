@@ -17,6 +17,16 @@
 	<div id="greenFeeIntro">
 		 
 	</div>
+	<div id="checkmarkdiv">
+		<img id="checkmark" src="photos/checkmark.png" width="396" height="304" align="middle">		
+	
+	<h1 id="confirmationh1">
+Your Submission was successful.
+</h1>
+</div>
 
+<h2 id="confirmationh2">
+You may now close the page, Thank you for your time!
+</h2>
 </body>
 </html>

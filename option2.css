@@ -76,5 +76,24 @@ p{
 	padding-right: 5%;
 	font-size: 15px;
 }
+#checkmark{
+
+}
+#checkmarkdiv{
+	height: 300px;
+	width: 300px;
+	display:block;
+	margin: 20px auto 0px auto;
+   background-position: center center;
+   padding-top: 8%;
+}
+#confirmationh1{
+	text-align: center;
+}
+#confirmationh2{
+	text-align: center;
+	margin: 140px auto 0px auto;
+}
+
 
 
