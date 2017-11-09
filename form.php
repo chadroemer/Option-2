@@ -43,7 +43,7 @@
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
 <<<<<<< HEAD
-<input id="submitbutton" style="display: inline;" type="submit" value="Submit Form">
+
 =======
 			
 =======
