@@ -29,16 +29,6 @@
 
 	<div id="greenFeeIntro">
 
-<<<<<<< HEAD
-
-
-
-
-
-		
-
-=======
->>>>>>> origin/master
 		<div id="tabs">
 		  <ul>
 		    <li><a href="#tabs-1">Form Tab 1</a></li>
@@ -48,18 +38,21 @@
 		  </ul>
 		  <div id="tabs-1">
 			
-<<<<<<< HEAD
 			<form id="FormTab1" action="confirmation.php" method="post">
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
+<<<<<<< HEAD
 <input id="submitbutton" style="display: inline;" type="submit" value="Submit Form">
 =======
 			
+=======
+
+			<form id="FormTab1" method="post">
+>>>>>>> origin/master
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
->>>>>>> origin/master
 
 				<p>Total Amount Requested</p>
 				<hr id="formHr">
