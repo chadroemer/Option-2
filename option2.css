@@ -41,6 +41,50 @@ p {
     padding-right: 2%;
 }
 
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
+}
+
+.tab4p {
+    color: #4B08A1;
+    font-size: 18px;
+}
+
+.tab4text {
+    height: 100px;
+    width: 100%;
+}
+
+#submitButton{
+	float: right;
+}
+
 #loginForm {
     margin-left: 20%;
     margin-right: 20%;
@@ -158,48 +202,6 @@ p {
 }
 
 @import "bourbon";
-
-
-
-.checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #7ac142;
-    fill: none;
-    animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
-}
-
-.checkmark {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #fff;
-    stroke-miterlimit: 10;
-    margin: 10% auto;
-    box-shadow: inset 0px 0px 0px #7ac142;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-}
-
-.checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
-}
-
-.tab4p {
-    color: #4B08A1;
-    font-size: 18px;
-}
-
-.tab4text {
-    height: 100px;
-    width: 100%;
-}
 
 @keyframes stroke {
     100% {
