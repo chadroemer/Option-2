@@ -28,7 +28,7 @@
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
 
-	<div id="greenFeeIntro">
+	<div id="greenFeeFormContent">
 
 		<div id="tabs">
 		  <ul>

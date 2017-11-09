@@ -15,8 +15,8 @@
 	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
-	<div id="content">
-		
+																<!-- begin index content -->
+<div id="content">
 	<div class="indexMain" id="leftIndex">
 
 		<div id="greenFeeIntro">
@@ -45,13 +45,7 @@
 
 			<hr id="introHr">
 			<br>
-			<br>
-				<div class="Button">
-					<a href="form.php">
-						<!-- <button>Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-						</button> -->
-					</a>
-				</div>
+			<p id="credit">Survey made by WSU CS-344 class 11/1/2017</p>
 	</div>
 		
 	</div>
@@ -67,15 +61,10 @@
 				<input type="Password" name="" id="inputSize" placeholder="Password">
 				<br><br>
 				<button type="button">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
-				<!-- <button>Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-				</button> -->
 			</form>
 		</div>
-
 	</div>
-
-    <!-- <p id="credit">Survey made by CS344 class 11/1/2017</p> -->
-	</div>
+</div>
 
 	<!-- ʕ•́ᴥ•̀ʔ -->
 
