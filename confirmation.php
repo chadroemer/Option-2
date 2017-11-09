@@ -1,3 +1,50 @@
+<?php
+$servername = "localhost";
+$username = "GreenFee";
+$password = "GreenPass";
+$dbname = "GreenDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+// Create database
+$sql = "CREATE DATABASE GreenDB";
+if ($conn->query($sql) === TRUE) {
+ 
+} else {
+   
+}
+
+
+$conn->close();
+?>
+<?php
+
+    try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+ 
+$sql = "CREATE TABLE GreenTry (
+    projectTitle VARCHAR(30) NOT NULL,
+    Amount INT(6), Contact VARCHAR(30),
+    campusAffiliation VARCHAR(30), email VARCHAR(50),
+    phoneContact VARCHAR(30), status VARCHAR(30),
+    ideaOrigin VARCHAR(30), groupName VARCHAR(30),
+    staffAdvisor VARCHAR(30), advisorEmail VARCHAR(50),
+    advisorDept VARCHAR(30), advisorPhone VARCHAR(30),
+    projectSummary VARCHAR(50) 
+)";
+$conn->exec($sql);
+}
+catch(PDOException $e)
+    {
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +78,48 @@ Your Submission was successful. <?php
 			} ?>
 </h1>
 </div>
+<?php
+$projectTitle = $_POST["projectTitle"];
+$amount = $_POST["Amount"];
+$contact = $_POST["Contact"];
+$campusAffiliation = $_POST["campusAffiliation"];
+$email = $_POST["email"];
+$phoneContact = $_POST["phoneContact"];
+$status = $_POST["status"];
+$ideaOrigin = $_POST["ideaOrigin"];
+$groupName = $_POST["groupName"];
+$staffAdvisor = $_POST["staffAdvisor"];
+$advisorEmail = $_POST["advisorEmail"];
+$advisorDept = $_POST["advisorDept"];
+$advisorPhone = $_POST["advisorPhone"];
+$projectSummary = $_POST["projectSummary"];
+       if (isset($dbname)) {
+       //inserting into Database
+    try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    $sql = "INSERT INTO GreenTry (projectTitle, Amount, Contact, campusAffiliation, email, 
+    phoneContact, status, ideaOrigin, groupName, staffAdvisor, advisorEmail, advisorDept, 
+    advisorPhone, projectSummary)
+    VALUES ('$projectTitle','$amount', '$contact','$campusAffiliation'
+    ,'$email','$phoneContact','$status','$ideaOrigin','$groupName',
+    '$staffAdvisor','$advisorEmail','$advisorDept','$advisorPhone',
+    '$projectSummary')";
+    $conn->exec($sql);
+
+    }
+catch(PDOException $e)
+    {
+
+    }
+    } else {
+        
+    }
+
+$conn = null;
+?>
 <h2 id="confirmationh2">
 You may now close the page, Thank you for your time!
 </h2>
