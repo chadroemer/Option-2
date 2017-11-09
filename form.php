@@ -36,7 +36,7 @@
 
 
 		
-=======
+
 		<div id="tabs">
 		  <ul>
 		    <li><a href="#tabs-1">Form Tab 1</a></li>
@@ -46,11 +46,11 @@
 		  </ul>
 		  <div id="tabs-1">
 			
-			<form id="FormTab1">
+			<form id="FormTab1" action="confirmation.php" method="post">
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
->>>>>>> origin/master
+
 
 				<p>Total Amount Requested</p>
 				<hr id="formHr">
@@ -69,7 +69,7 @@
 				<input type="text" name="email" id="inputSize" required>
 
 				<p>Cell and/or Work Phone Number(s):</p>
-				<hr id="formHr">
+				<hr id="formHr" >
 				<input type="text" name="phoneContact" id="inputSize" required>
 
 				<p>Status:</p>
@@ -79,17 +79,17 @@
   					<input type="radio" name="status" value="other">Other
 
 				<br><br>
-			</form>
+			
 
 
 		  </div>
 		  <div id="tabs-2">
 		    <p><strong>As a Student, Choose One of These Options:</strong></p>
-		    <form id="FormTab1">
+		   
 		    	<hr id="formHr">
 				  	<input type="radio" name="ideaOrigin" value="one">This Project is Soley My Own.<br><br>
   					<input type="radio" name="ideaOrigin" value="group">This Project is Proposed on Behalf of a Group.<br>
-			</form>
+		
 		  </div>
 
 		  <div id="tabs-3">
@@ -123,10 +123,11 @@
 		    	<p>Provide a summary of your project:</p>
 		    	<hr id="formHr">
 		    	<input type="text" name="projectSummary" class="tab4text">
+				<input id="submitbutton" style="display: inline;" type="submit" value="Submit Form">
 		  </div>
 
 		</div>
-
+</form>
 </div>
 
 </body>
