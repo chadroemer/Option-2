@@ -13,6 +13,7 @@ body{
 button{
 	font-size: 15px;
 	position: absolute;
+
 }
 
 span{
@@ -100,6 +101,7 @@ p{
 	/*box-shadow: 0 0 15px .5px #33056d;*/
 	color: black;
 	margin-left: 2%;
+	height: 120%;
 }
 
 #greenFeeh2{
