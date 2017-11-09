@@ -16,6 +16,17 @@ button{
 
 span{
 	color: #067c14;
+} 
+
+p{
+	font-family: Open Sans;
+	padding-left: 5%; 
+	padding-right: 5%;
+	font-size: 15px;
+}
+
+#inputSize{
+	width: 100%;
 }
 
 .Button{
@@ -70,12 +81,6 @@ span{
 	color: black;
 }
 
-p{
-	font-family: Open Sans;
-	padding-left: 5%; 
-	padding-right: 5%;
-	font-size: 15px;
-}
 #checkmark{
 
 }
@@ -94,6 +99,12 @@ p{
 	text-align: center;
 	margin: 100px auto 0px auto;
 }
+
+#formHr{
+	width: 95%;
+	border: 1px solid #4B08A1;
+}
+
 @import "bourbon";
 
 
@@ -126,6 +137,16 @@ p{
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
   animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
+}
+
+.tab4p{
+	color: #4B08A1;
+	font-size: 18px;
+}
+
+.tab4text{
+	height: 100px;
+	width: 100%;
 }
 
 @keyframes stroke {
