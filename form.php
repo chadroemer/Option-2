@@ -42,14 +42,8 @@
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
-<<<<<<< HEAD
-
-=======
-			
-=======
 
 			<form id="FormTab1" method="post">
->>>>>>> origin/master
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
