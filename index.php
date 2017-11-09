@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css">
 	<link rel="icon" href="photos/WSU_GreenFee.png">
 	<link rel="stylesheet" type="text/css" href="option2.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Green Fee Application</title>
 </head>
 <body class="index">
@@ -13,10 +14,8 @@
 	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
-	<div>
+	<div id="content">
 		
-		<!-- <img id="indexBack" src="photos/SugarLoafc.jpg"> -->
-
 	<div class="indexMain" id="leftIndex">
 
 		<div id="greenFeeIntro">
@@ -61,25 +60,18 @@
 			<p>Green Fee Portal Login</p>
 			<hr>
 			<form> 
-				<p>Please type in username: <i class="fa fa-user" aria-hidden="true"></i></p>
+				<p><i class="fa fa-user" aria-hidden="true"></i> Please type in StarID/Username: </p>
 				<input type="text" name="" id="inputSize" placeholder="Username">
-				<p>Please type in password: <i class="fa fa-unlock-alt" aria-hidden="true"></i></p>
+				<p><i class="fa fa-unlock-alt" aria-hidden="true"></i> Please type in Password: </p>
 				<input type="text" name="" id="inputSize" placeholder="Password">
 				<br><br>
-				<button>Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-				</button>
+				<button type="button" class="btn btn-info">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+				<!-- <button>Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+				</button> -->
 			</form>
 		</div>
 
 	</div>
-
-
-
-
-
-
-
-
 
 
 
