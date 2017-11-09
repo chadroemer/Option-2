@@ -53,9 +53,9 @@
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
-
+<input id="submitbutton" style="display: inline;" type="submit" value="Submit Form">
 =======
-			<form id="FormTab1" method="post">
+			
 				<p>Project Title</p>
 				<hr id="formHr">
 				<input type="text" name="projectTitle" id="inputSize" required>
