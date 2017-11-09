@@ -27,15 +27,15 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         {
             if($info['count'] > 1)
                 break;
-            echo "<p>You are accessing <strong> ". $info[$i]["sn"][0] .", " . $info[$i]["givenname"][0] ."</strong><br /> (" . $info[$i]["samaccountname"][0] .")</p>\n";
-            echo '<pre>';
-            var_dump($info);
-            echo '</pre>';
-            $userDn = $info[$i]["distinguishedname"][0]; 
+            echo "<p>Welcome <strong> ". $info[$i]["sn"][0] .", " . $info[$i]["givenname"][0] ."</strong><br /> Your username is:  <strong>(" . $info[$i]["samaccountname"][0] .")</strong></p>\n";
+           // echo '<pre>';
+           // var_dump($info);
+           // echo '</pre>';
+           // $userDn = $info[$i]["distinguishedname"][0]; 
         }
         @ldap_close($ldap);
     } else {
-        $msg = "Invalid email address / password";
+        $msg = "Invalid username / password";
         echo $msg;
     }
 
