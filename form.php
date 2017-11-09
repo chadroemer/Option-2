@@ -15,7 +15,27 @@
 	</div>
 
 	<div id="greenFeeIntro">
+<form  action="confirmation.php"method="get"><br>
 
+
+Q1: <input type="text" name="user"> 
+<br><br>
+Q2: <input type="text" name="user"> 
+<br><br>
+Q3: <input type="text" name="user"> 
+<br><br>
+Q4: <input type="text" name="user"> 
+<br><br>
+Q5: <input type="text" name="user"> 
+<br><br>
+Q6: <input type="text" name="user"> 
+<br><br>
+
+
+<input id="hostbutton" type="submit" value="Submit Form">
+
+
+</form>
 		
 
 	</div>
