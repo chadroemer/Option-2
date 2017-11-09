@@ -1,8 +1,33 @@
 <?php
+$root="root"; 
+$root_password = "";
+$host="localhost"; 
+$user='tr4';
+$pass='fer'; 
+$db="GreenDBw";
+
+try {
+     $dbh = new PDO("mysql:host=$host", $root, $root_password);
+
+        $dbh->exec("CREATE DATABASE `$db`;
+                CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
+                GRANT ALL ON `$db`.* TO '$user'@'localhost';
+                ") 
+                or die(print_r($dbh->errorInfo(), true));
+    } catch (PDOException $e) {
+        die("DB ERROR: ". $e->getMessage());
+    }
+
+
+?>
+
+
+<?php
 $servername = "localhost";
-$username = "GreenFee";
-$password = "GreenPass";
-$dbname = "GreenDB";
+$username = "tr4";
+$password = "fer";
+
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -12,7 +37,7 @@ if ($conn->connect_error) {
 } 
 
 // Create database
-$sql = "CREATE DATABASE GreenDB";
+$sql = "CREATE DATABASE $db";
 if ($conn->query($sql) === TRUE) {
  
 } else {
@@ -25,7 +50,7 @@ $conn->close();
 <?php
 
     try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
@@ -51,7 +76,7 @@ catch(PDOException $e)
 		<meta charset="utf-8">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css">
-		<link rel="icon" href="photos/greenFee.png">
+		<link rel="icon" href="photos/WSU_GreenFee.png">
 		<link rel="stylesheet" type="text/css" href="option2.css">
 		<title>Confirmation</title>
 	</head>
@@ -72,7 +97,7 @@ catch(PDOException $e)
 					{
 							$querystring = $querystring.$entry.',';	 
 					}
-				print $querystring . "<br>";
+			
 				//global $_name;
 				//$_name = $_POST['name'];
 			} ?>
@@ -94,10 +119,10 @@ $advisorEmail = $_POST["advisorEmail"];
 $advisorDept = $_POST["advisorDept"];
 $advisorPhone = $_POST["advisorPhone"];
 $projectSummary = $_POST["projectSummary"];
-       if (isset($dbname)) {
+       if (isset($db)) {
        //inserting into Database
     try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
