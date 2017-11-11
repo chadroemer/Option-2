@@ -15,6 +15,10 @@
 	</div>
 
 	<div id="greenFeeIntro">
+		<form action="" id="greenForm">
+			
+			
+		</form>
 		 
 	</div>
 
