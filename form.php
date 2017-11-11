@@ -7,11 +7,10 @@
 	<link href="https://fonts.googleapis.com/css">
 	<link rel="icon" href="photos/greenFee.png">
 	<link rel="stylesheet" type="text/css" href="option2.css">
-	<title>Application Form</title>
-
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Application Form</title>
 		  <script>
 		  $( function() {
 		    $( "#tabs" ).tabs({
@@ -26,14 +25,11 @@
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
 
-<<<<<<< HEAD
 	<div id="greenFeeIntro">
 		<form action="" id="greenForm">
 			
-			
 		</form>
 		 
-=======
 	<div id="greenFeeFormContent">
 
 	<div id="tabs">
@@ -125,7 +121,8 @@
 		    <p class="tab4p"><strong>1. Project Description</strong></p>
 		    <p>Provide a summary of your project:</p>
 		    	<hr id="formHr">
-		    	<input type="text" name="projectSummary" class="tab4text">
+		    	<!-- <input type="text" rows="4" name="projectSummary" class="tab4text"> -->
+		    	<!-- <textarea name="textarea" style="width:250px;height:150px;"></textarea> -->
 
 			<p class="tab4p"><strong>2. Student Input and Endorsement</strong></p>
 		    <p>How has your project sought student input and endorsement? This could include focus groups, presentation to the SGA Student Sustainability Committee, student org endorsement, etc.</p>
@@ -191,7 +188,6 @@
 					<input id="submitButton" type="submit" value="Submit Form">
 				<br>
 		  </div>
->>>>>>> 9026570e2a0b2228196ac680f2be693e99fae639
 	</div>
 </form>
 </div>
