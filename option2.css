@@ -27,7 +27,7 @@ p {
 }
 
 .index {
-    background-image: url("photos/sugarLoaf.jpg");
+    background-image: url("photos/sugarLoaf.jpg") no-repeat;
     background-size: cover;
     width: 100%;
 }
@@ -144,6 +144,7 @@ p {
 	margin-left: 2%;
 	height: 120%;
 	border-radius: 2px;
+
 }
 
 #greenFeeFormContent{
