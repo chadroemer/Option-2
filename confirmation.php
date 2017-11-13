@@ -9,7 +9,7 @@
 		try {
 		     $dbh = new PDO("mysql:host=$host", $root, $root_password);
 
-		        $dbh->exec("CREATE DATABASE `$db`;
+		        $dbh->exec("CREATE DATABASE IF NOT EXISTS `$db`;
 		                CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
 		                GRANT ALL ON `$db`.* TO '$user'@'localhost';
 		                ") 
@@ -42,8 +42,8 @@
 		    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
 		    // set the PDO error mode to exception
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		 
-		$sql = "CREATE TABLE GreenTry (
+		 $sql = "DROP TABLE GreenTry IF EXISTS";
+		$sql = "CREATE TABLE GreenTry IF NOT EXISTS (
 		    projectTitle VARCHAR(30) NOT NULL,
 		    Amount INT(6), Contact VARCHAR(30),
 		    campusAffiliation VARCHAR(30), email VARCHAR(50),
