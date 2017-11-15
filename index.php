@@ -1,3 +1,41 @@
+<?php
+	if(isset($_POST['username']) && isset($_POST['password']))
+	{
+		$dc = "ldap://dc1.winona.edu";
+	
+		$dc_connect = ldap_connect($dc);
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+
+		$dc_connect_user = 'winona' . "\\" . $username;
+
+		ldap_set_option($dc_connect, LDAP_OPT_PROTOCOL_VERSION, 3);
+		ldap_set_option($dc_connect, LDAP_OPT_REFERRALS, 0);
+
+		$bind = @ldap_bind($dc_connect, $dc_connect_user, $password);
+
+		if ($bind) 
+		{
+			$filter="(sAMAccountName=$username)";
+			$result = ldap_search($dc_connect,"dc=winona,dc=edu",$filter);
+			ldap_sort($dc_connect,$result,"sn");
+			$info = ldap_get_entries($dc_connect, $result);
+			for ($i=0; $i<$info["count"]; $i++)
+			{
+				if($info['count'] > 1)
+					break;
+				echo "<p>Welcome <strong> ". $info[$i]["sn"][0] .", " . $info[$i]["givenname"][0] ."</strong><br /> Your username is:  <strong>(" . $info[$i]["samaccountname"][0] .")</strong></p>\n";
+			}
+			@ldap_close($dc_connect);
+		} 
+		else 
+		{
+			$msg = "Invalid username / password";
+			echo "<script type='text/javascript'>alert('$msg');</script>";
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +59,11 @@
 
 		<div id="greenFeeIntro">
 		<br>
+<<<<<<< HEAD
 		<h2 id="greenFeeh2">WSU Student Green Fee Grant Application<i class="fa fa-leaf" aria-hidden="true"></i></h2>
+=======
+		<h2 id="greenFeeh2">WSU Student Green Fee Grant  <i class="fa fa-leaf" aria-hidden="true"></i></h2>
+>>>>>>> ad5ad567838a1368ab46cfe41d5ff60c72bfbf5f
 
 			<p>The <span>WSU Student Green Fee (SGF)</span> provides funding for projects that promote environmental sustainability and enhance the student experience at WSU.  SGF funding will be allocated to projects that increase the use of renewable energy on campus and/or in the local community, increase the energy efficiency of our facilities, reduce the amount of waste created and material resources used on campus, encourage sustainable behaviors, and integrate sustainability into teaching, research, operations, buildings and grounds management at WSU. The All-University Sustainability Committee administers the SGF.
 			</p>
@@ -54,13 +96,13 @@
 		<div id="loginForm">
 			<p>Green Fee Portal Login</p>
 			<hr>
-			<form> 
+			<form method="POST"> 
 				<p><i class="fa fa-user" aria-hidden="true"></i> Please type in StarID/Username: </p>
-				<input type="text" name="" id="inputSize" placeholder="Username">
+				<input type="text" name="username" id="inputSize" placeholder="Username">
 				<p><i class="fa fa-unlock-alt" aria-hidden="true"></i> Please type in Password: </p>
-				<input type="Password" name="" id="inputSize" placeholder="Password">
+				<input type="Password" name="password" id="inputSize" placeholder="Password">
 				<br><br>
-				<button type="button">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+				<button type="submit" formaction="#">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
 			</form>
 		</div>
 	</div>
