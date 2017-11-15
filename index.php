@@ -59,11 +59,9 @@
 
 		<div id="greenFeeIntro">
 		<br>
-<<<<<<< HEAD
 		<h2 id="greenFeeh2">WSU Student Green Fee Grant Application<i class="fa fa-leaf" aria-hidden="true"></i></h2>
-=======
+
 		<h2 id="greenFeeh2">WSU Student Green Fee Grant  <i class="fa fa-leaf" aria-hidden="true"></i></h2>
->>>>>>> ad5ad567838a1368ab46cfe41d5ff60c72bfbf5f
 
 			<p>The <span>WSU Student Green Fee (SGF)</span> provides funding for projects that promote environmental sustainability and enhance the student experience at WSU.  SGF funding will be allocated to projects that increase the use of renewable energy on campus and/or in the local community, increase the energy efficiency of our facilities, reduce the amount of waste created and material resources used on campus, encourage sustainable behaviors, and integrate sustainability into teaching, research, operations, buildings and grounds management at WSU. The All-University Sustainability Committee administers the SGF.
 			</p>
