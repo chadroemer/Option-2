@@ -114,7 +114,7 @@
 		  </div>
 
 		  <div id="tabs-4">
-			    <p><strong>Instructions:</strong> Please fill in answers to the the following 10 questions. You may copy and paste your text from another document, if you wish. </p>
+			    <p><strong><u>Instructions:</u></strong> Please fill in answers to the the following 10 questions. You may copy and paste your text from another document, if you wish. </p>
 			    	<hr id="formHr"> 
 			    	<br>
 
