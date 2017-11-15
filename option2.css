@@ -236,3 +236,13 @@ p {
         box-shadow: inset 0px 0px 0px 30px #7ac142;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    p{
+        font-size: 2em;
+    }
+}
+
+
+
+
