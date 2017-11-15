@@ -42,7 +42,7 @@
 		    // set the PDO error mode to exception
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		 
-		$sql = "CREATE TABLE GreenTry IF NOT EXISTS (
+		$sql = "CREATE TABLE IF NOT EXISTS GreenTry (
 		    projectTitle VARCHAR(30) NOT NULL,
 		    Amount INT(6), Contact VARCHAR(30),
 		    campusAffiliation VARCHAR(30), email VARCHAR(50),
