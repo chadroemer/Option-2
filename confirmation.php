@@ -2,8 +2,8 @@
 		$root="root"; 
 		$root_password = "";
 		$host="localhost"; 
-		$user='tr4';
-		$pass='fer'; 
+		$user='GreenUser';
+		$pass='GreenPass'; 
 		$db="GreenDBw";
 
 		try {
@@ -21,10 +21,9 @@
 
 <?php
 		$servername = "localhost";
-		$username = "tr4";
-		$password = "fer";
+		
 		// Create connection
-		$conn = new mysqli($servername, $username, $password);
+		$conn = new mysqli($servername, $user, $pass);
 		// Check connection
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
@@ -39,10 +38,10 @@
 
 <?php
 		    try {
-		    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
+		    $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		    // set the PDO error mode to exception
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		 $sql = "DROP TABLE GreenTry IF EXISTS";
+		 
 		$sql = "CREATE TABLE GreenTry IF NOT EXISTS (
 		    projectTitle VARCHAR(30) NOT NULL,
 		    Amount INT(6), Contact VARCHAR(30),
@@ -114,11 +113,11 @@
 		$advisorEmail = $_POST["advisorEmail"];
 		$advisorDept = $_POST["advisorDept"];
 		$advisorPhone = $_POST["advisorPhone"];
-		$projectSummary = $_POST["projectSummary"];
+		$projectSummary = $_POST["textarea1"];
 		       if (isset($db)) {
 		       //inserting into Database
 		    try {
-		    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
+		    $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		    // set the PDO error mode to exception
 		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -144,6 +143,6 @@ You may now close the page, Thank you for your time!
 </h2>
 </body>
 		</div>
-		<h2 id="confirmationh2">You may now close the page, Thank you for your time!</h2>
+		
 	</body>
 </html>
