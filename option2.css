@@ -111,7 +111,7 @@ p {
 
 #inputSize {
     width: 100%;
-    height: 25px;
+    height: 20px;
 }
 
 #indexBack {
@@ -242,6 +242,10 @@ p {
     p{
         font-size: 1.5em;
     }
+    #inputSize{
+       height: 28px;
+    }
+
 }
 
 
