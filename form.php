@@ -195,6 +195,7 @@
 			    	<hr id="formHr">
 			    	<br>
 						<input id="submitButton" type="submit" value="Submit Form">
+						<!-- <button id="submitButton" type="submit" value="Submit Form" formaction="#">Submit <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
 					<br>
 		  </div>
 	</div>

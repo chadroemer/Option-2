@@ -98,7 +98,7 @@
 				<p><i class="fa fa-unlock-alt" aria-hidden="true"></i> Please type in Password: </p>
 				<input type="Password" name="password" id="inputSize" placeholder="Password">
 				<br><br>
-				<button type="submit" formaction="#">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+				<button id="loginButton" type="submit" formaction="#">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
 			</form>
 		</div>
 	</div>

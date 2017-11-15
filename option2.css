@@ -82,10 +82,6 @@ p {
     word-break: break-word;
 }
 
-#submitButton{
-	float: right;
-}
-
 #loginForm {
     margin-left: 20%;
     margin-right: 20%;
@@ -112,6 +108,7 @@ p {
 #inputSize {
     width: 100%;
     height: 18px;
+    border: 1px solid black;
 }
 
 #indexBack {
@@ -211,6 +208,22 @@ p {
 #formHr {
     width: 95%;
     border: 1px solid #4B08A1;
+}
+
+#loginButton{
+    width: 100px;
+    height: 28px;
+    background-color: #4B08A1;
+    color: white;
+}
+
+#submitButton{
+    float: right;
+    background-color: #4B08A1;
+    width: 125px;
+    height: 28px;
+    color: white;
+    display: inline-block;
 }
 
 @import "bourbon";
