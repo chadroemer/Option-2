@@ -57,7 +57,7 @@
 <div id="content">
 	<div class="indexMain" id="leftIndex">
 
-		<div id="greenFeeIntro">
+		<div id="greenFeeIntroIndex">
 		<br>
 		<h2 id="greenFeeh2">WSU Student Green Fee Grant Application <i class="fa fa-leaf" aria-hidden="true"></i></h2>
 
@@ -88,7 +88,6 @@
 		
 	</div>
 	<div class="indexMain" id="rightIndex">
-		
 		<div id="loginForm">
 			<p>Green Fee Portal Login</p>
 			<hr>
