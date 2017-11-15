@@ -122,9 +122,6 @@
 			    <p>Provide a summary of your project:</p>
 			    	<hr id="formHr">
 
-
-
-			    	<!-- <input type="text" rows="4" name="projectSummary" class="tab4text"> -->
 			    	<textarea name="textarea1" style="width:100%;height:100px;"></textarea>
 
 				<p class="tab4p"><strong>2. Student Input and Endorsement</strong></p>

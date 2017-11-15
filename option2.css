@@ -29,7 +29,7 @@ p {
 .index {
     background-image: url("photos/sugarLoaf.jpg");
     background-size: cover;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .indexMain {
@@ -136,20 +136,19 @@ p {
 }
 
 #greenFeeIntro{
-	background-color: rgba(255, 255, 255, 0.8);
-	/*box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);*/
-	box-shadow: 0px 10px 64px 0px rgba(0,0,0,0.75);
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+	/*box-shadow: 0px 10px 64px 0px rgba(0,0,0,0.75);*/
+    box-shadow: 10px 0px 0px 0px #888888; 
 	border-top: none;
 	color: black;
 	height: 100%;
-	border-radius: 2px;
-
+	border-radius: 2px; 
 }
 
 #greenFeeIntroIndex{
     background-color: rgba(255, 255, 255, 0.8);
     /*box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);*/
-    box-shadow: 0px 10px 64px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 15px 64px 0px rgba(0,0,0,0.75);
     border-top: none;
     color: black;
     margin-left: 2%;
