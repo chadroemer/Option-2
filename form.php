@@ -36,9 +36,9 @@
 		  <ul>
 		    <li><a href="#tabs-1">User Info</a></li>
 		    <li><a href="#tabs-2">Group Info</a></li>
-		    <li><a href="#tabs-3">Project Info</a></li>
+		    <li><a href="#tabs-3">Project</a></li>
 		    <li><a href="#tabs-4">Questions</a></li>
-		    <li><a href="#tabs-5">Finalize</a></li>
+		    <li><a href="#tabs-5">Budget</a></li>
 		  </ul>
 		  <div id="tabs-1">
 			
@@ -187,7 +187,7 @@
 			    <p>Project includes matching funds from sources beyond SGF or includes a plan for sustained funding.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSufficiency" class="tab4text"> -->
-			    	<textarea name="textarea10" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="textarea10" style="width:100%;height:100px;" type="project"></textarea>
 
 			    	<hr>
 
@@ -218,6 +218,46 @@
 			 			Please list all of your expenses for the project. Key budget components include total project cost, materials costs, labor costs, annual maintenance costs and annual operations costs. You MUST provide documentation to substantiate the cost of budget items (i.e. vendor proposal, product catalog page, supplier web site, etc.). 
 			 		</p>
 
+					<p>Resource Materials:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Educational Supplies:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Student Support:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Staff Support:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Community Member Support:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Promotional Materials:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>Other:</p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
+					<p>TOTAL REQUESTED: $__ this needs to be javascript to add up the inputs </p>
+					<hr id="formHr">
+					<input type="text" name="Amount" id="inputSize" required>
+					<hr>
+					
 			 		<p>
 						Email the filled-in budget form, and any additional supporting documents, to: 
 						<a href="mailto:nengstrom@winona.edu?subject=SGF%20application">NEngstrom@winona.edu</a>
