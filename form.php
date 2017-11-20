@@ -34,25 +34,25 @@
 
 	<div id="tabs">
 		  <ul>
-		    <li><a href="#tabs-1">Form Tab 1</a></li>
-		    <li><a href="#tabs-2">Form Tab 2</a></li>
-		    <li><a href="#tabs-3">Form Tab 3</a></li>
-		    <li><a href="#tabs-4">Form Tab 4</a></li>
-		    <li><a href="#tabs-5">Form Tab 5</a></li>
+		    <li><a href="#tabs-1">User Info</a></li>
+		    <li><a href="#tabs-2">Contact Info</a></li>
+		    <li><a href="#tabs-3">Project Info</a></li>
+		    <li><a href="#tabs-4">Questions</a></li>
+		    <li><a href="#tabs-5">Finalize</a></li>
 		  </ul>
 		  <div id="tabs-1">
 			
 				<form id="FormTab1" action="confirmation.php" method="post">
-				<p>Project Title</p>
+				<p>Star ID:</p>
 					<hr id="formHr">
 					<input type="text" name="projectTitle" id="inputSize" required>
 
 				<form id="FormTab1" method="post">
-				<p>Project Title</p>
+				<p>Username: </p>
 					<hr id="formHr">
 					<input type="text" name="projectTitle" id="inputSize" required>
 
-				<p>Total Amount Requested</p>
+				<p>Campus Affiliation</p>
 					<hr id="formHr">
 					<input type="text" name="Amount" id="inputSize" required>
 
