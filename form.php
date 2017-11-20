@@ -111,109 +111,103 @@
 			    	<hr id="formHr"> 
 			    	<br>
 
-			    <p class="tab4p"><strong>1. Project Description</strong></p>
-			    <p>Provide a summary of your project:</p>
+			    <p class="tab4p"><strong>1. Student Experience</strong></p>
+			    <p>Project includes opportunities for student involvement and/or will positively impact the student experience.</p>
 			    	<hr id="formHr">
 
 			    	<textarea name="textarea1" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>2. Sustainability and the student experience at WSU</strong></p>
-			    <p>How does your project promote and enhance aspects of sustainability (environmental, economic and/or equity) and positively impact the student experience at WSU? Please be as specific and detailed as possible.</p>
+			    <p class="tab4p"><strong>2. Connection to Campus</strong></p>
+			    <p>Project directly addresses environmental sustainability on the WSU campus or in the capacity that on-campus activities directly influence environmental sustainability in the surrounding community..</p>
 			    	<hr id="formHr">
 
 			    	<textarea name="textarea2" style="width:100%;height:100px;"></textarea>	
 
 			    	<hr>
 
-			    	<p class="tab4p"><strong>3. Product Supplier(s) and material specifications</strong></p>
-			    <p>Please be as specific as possible including where to purchase the materials (local vendors preferred), colors, model #, etc. Please include any quotes or proposals that you have received.</p>
+			    	<p class="tab4p"><strong>3. Feasibility and Institutional Support</strong></p>
+			    <p>Project is feasible and has support from appropriate campus individuals and entities. Individual students or student organizations must have the signature of a faculty or staff advisor who is committed to advising throughout project implementation</p>
 			    	<hr id="formHr">
 
 			    	<textarea name="textarea3" style="width:100%;height:100px;"></textarea>	
 
 			    	<hr>
 
-				<p class="tab4p"><strong>4. Student Input and Endorsement</strong></p>
-			    <p>How has your project sought student input and endorsement? This could include focus groups, presentation to the SGA Student Sustainability Committee, student org endorsement, etc. Please include any letters of support, copies of meeting minutes showing endorsement, etc., if applicable.</p>
+				<p class="tab4p"><strong>4. Appropriateness of Schedule and Budget Request</strong></p>
+			    <p>Project schedule and budget are reasonable and conform to established timelines, constraints and parameters.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
 			    	<textarea name="textarea4" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>5. Faculty and Staff Input and Endorsement </strong></p>
-			    <p>Please note which departments, committees and/or specific positions on campus you have discussed your proposal with.  In some cases, projects will require review and approval from one or more of these prior to review by the Sustainability Committee.  Based on the specifics of your proposal, please anticipate which areas of campus will be impacted and engage with them early on to secure their support and involvement. Projects impacting the campus landscape will require approval by the Arboretum and Land Stewardship Committee</p>
+			    <p class="tab4p"><strong>5.Accountability </strong></p>
+			    <p>Project includes mechanism for evaluation and follow-up. At a minimum, a project plan includes appropriate progress reports to the Sustainability Committee based on the duration of the project and a final report within 60 days following completion of the project</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
 			    	<textarea name="textarea5" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 				
-				<p class="tab4p"><strong>6. Anticipated Outcomes/Impact</strong></p>
-			    <p>What outcomes do you anticipate? Discuss environmental benefits, impact on the student experience, and the education and outreach potential. If the project has environmental benefits, please quantify those benefits in terms of kilowatt-hours saved, tons of greenhouse gas emissions reduced, gallons of stormwater treated, etc.</p>
+				<p class="tab4p"><strong>6. Innovation</strong></p>
+			    <p>Project is innovative in nature and does not include routine maintenance or code-compliant activities. Funding may support narrowing the gap between code-compliant and more sustainable alternatives</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectOutcome" class="tab4text"> -->
 			    	<textarea name="textarea6" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>7. Project Benchmarking</strong></p>
-			    <p>Have similar projects been implemented on other campuses? Have they been successful? How does this project differ? Please cite any case studies, reports, or other examples that your proposal is based on. Also include any information on options or alternative products that you considered, but ultimately rejected and the reason(s) for making these choices.</p>
+			    <p class="tab4p"><strong>7. Environmental Benefits</strong></p>
+			    <p>Project demonstrates a reduction in WSU\'s carbon footprint or provides other environmental benefits such as water conservation, storm water management, biodiversity conservation, and waste minimization.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectBenchmark" class="tab4text"> -->
 			    	<textarea name="textarea7" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>8. Accountability</strong></p>
-			    <p>How will you measure and evaluate your project’s progress and success?</p>
+			    <p class="tab4p"><strong>8. Regional Connection</strong></p>
+			    <p>Project provides intellectual and emotional linkage with the unique landscape of the Driftless Area/ Mississippi River, as well as the cultural lifeways of this special place.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectAccountability" class="tab4text"> -->
 			    	<textarea name="textarea8" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>9. Cost Savings</strong></p>
-			    <p>Will the project result in expected cost savings? If yes, what is the payback period?</p>
+			    <p class="tab4p"><strong>9.Outreach and Education</strong></p>
+			    <p> Project considers interdisciplinary and experiential education and outreach opportunities and has included them as part of its implementation plan.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSavings" class="tab4text"> -->
 			    	<textarea name="textarea9" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>10. Project Self Sufficiency</strong></p>
-			    <p>What is the total project budget? What is your plan for sustained funding? Is this project receiving funding from other sources? If so, please explain.</p>
+			    <p class="tab4p"><strong>10.Self Sufficiency</strong></p>
+			    <p>Project includes matching funds from sources beyond SGF or includes a plan for sustained funding.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSufficiency" class="tab4text"> -->
 			    	<textarea name="textarea10" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>11. Project Lifespan</strong></p>
-			    <p>What is the expected lifespan of the project? Who will be responsible for overseeing it during that time?</p>
+			    <p class="tab4p"><strong>11. Potential for Broad Application</strong></p>
+			    <p>Project has potential to be scalable across the campus.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectLifespan" class="tab4text"> -->
 			    	<textarea name="textarea11" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>12. Project Sustainability/Accountability</strong></p>
-			    <p>How will you ensure the sustained existence/maintenance of this project (including reporting requirements) once you are no longer involved? If the project will conclude while you are involved, what will happen to the materials purchased for the project and how will you return the project site to its original condition?</p>
+			    <p class="tab4p"><strong>12. Cost/Benefit Analysis (as appropriate)</strong></p>
+			    <p>Project proposal outlines project payback, lifecycle costs and savings, etc.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSustainability" class="tab4text"> -->
 			    	<textarea name="textarea12" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
-			    <p class="tab4p"><strong>13. Project Potenial</strong></p>
-			    <p>How can your project be scaled for broader campus application beyond the initial phase?</p>
-			    	<hr id="formHr">
-			    	<!-- <input type="text" name="projectSummary" class="tab4text"> -->
-			    	<textarea name="textarea13" style="width:100%;height:100px;"></textarea>
-
-			    	<hr>
+			 
 			    	<br><br>
 		  </div>
 
