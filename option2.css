@@ -74,6 +74,7 @@ p {
 .tab4p {
     color: #4B08A1;
     font-size: 18px;
+    margin-left: -4%;
 }
 
 .tab4text {
@@ -205,7 +206,8 @@ p {
 #formHr {
     width: 95%;
     border: 1px solid #4B08A1;
-    box-shadow: 0px -3px 5px 0px rgba(105,105,105,1);
+    /*box-shadow: 0px -3px 5px 0px rgba(105,105,105,1);*/
+    box-shadow: 0px -5px 22px 0px rgba(120,119,120,1);
 
 }
 
