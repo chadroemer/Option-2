@@ -25,6 +25,7 @@
 				if($info['count'] > 1)
 					break;
 				echo'<script type="text/javascript" language="JavaScript">window.location.href = "form.php";</script>';
+				//echo $info[$i]["description"][0];
 				//echo "<p>Welcome <strong> ". $info[$i]["sn"][0] .", " . $info[$i]["givenname"][0] ."</strong><br /> Your username is:  <strong>(" . $info[$i]["samaccountname"][0] .")</strong></p>\n";
 			}
 			@ldap_close($dc_connect);
