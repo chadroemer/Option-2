@@ -35,7 +35,7 @@
 	<div id="tabs">
 		  <ul>
 		    <li><a href="#tabs-1">User Info</a></li>
-		    <li><a href="#tabs-2">Contact Info</a></li>
+		    <li><a href="#tabs-2">Group Info</a></li>
 		    <li><a href="#tabs-3">Project Info</a></li>
 		    <li><a href="#tabs-4">Questions</a></li>
 		    <li><a href="#tabs-5">Finalize</a></li>
@@ -47,30 +47,23 @@
 					<hr id="formHr">
 					<input type="text" name="projectTitle" id="inputSize" required>
 
-				<form id="FormTab1" method="post">
-				<p>Username: </p>
-					<hr id="formHr">
-					<input type="text" name="projectTitle" id="inputSize" required>
-
-				<p>Campus Affiliation</p>
+		
+				<p>Username:</p>
 					<hr id="formHr">
 					<input type="text" name="Amount" id="inputSize" required>
 
-				<p>Name and Title of Primary Contact</p>
+				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
 					<hr id="formHr">
 					<input type="text" name="Contact" id="inputSize" required> 
 
-				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
+				<p>Email Address</p>
 					<hr id="formHr">
 					<input type="text" name="campusAffiliation" id="inputSize" required>
 
-				<p>Email Address:</p>
+				<p>Phone Number:</p>
 					<hr id="formHr">
 					<input type="text" name="email" id="inputSize" required>
 
-				<p>Cell and/or Work Phone Number(s):</p>
-					<hr id="formHr" >
-					<input type="text" name="phoneContact" id="inputSize" required>
 
 				<p>Status:</p>
 					<hr id="formHr">
