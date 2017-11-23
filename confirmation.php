@@ -47,7 +47,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 try {
-	$sql ="CREATE TABLE IF NOT EXISTS `advisor` ( `a_name` varchar(100) NOT NULL,
+	$sql ="CREATE TABLE IF NOT EXISTS `advisor` ( `a_name` varchar(100) NOT NULL PRIMARY KEY,
 	`email` varchar(320) DEFAULT NULL,`dept` varchar(45) DEFAULT NULL,
 	`phone` varchar(10) DEFAULT NULL)";
 	$conn->exec($sql);
@@ -168,7 +168,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		try{
-	$sql = "CREATE TABLE `user` 
+	$sql = "CREATE TABLE IF NOT EXISTS `user` 
 	( `id` varchar(45) NOT NULL PRIMARY KEY,
 	`u_name` varchar(100) DEFAULT NULL, 
 	`campus_affiliation` varchar(45) DEFAULT NULL,
@@ -186,29 +186,96 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		echo $sql . "<br>" . $e->getMessage();
 	}
 ?>
-?>
 
 <?php
-		    try {
-		    $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
-		    // set the PDO error mode to exception
-		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		 
-		$sql = "CREATE TABLE IF NOT EXISTS GreenTry (
-		    projectTitle VARCHAR(30) NOT NULL,
-		    Amount INT(6), Contact VARCHAR(30),
-		    campusAffiliation VARCHAR(30), email VARCHAR(50),
-		    phoneContact VARCHAR(30), status VARCHAR(30),
-		    ideaOrigin VARCHAR(30), groupName VARCHAR(30),
-		    staffAdvisor VARCHAR(30), advisorEmail VARCHAR(50),
-		    advisorDept VARCHAR(30), advisorPhone VARCHAR(30),
-		    projectSummary VARCHAR(50) 
-		)";
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `answer` ADD CONSTRAINT `fk_answer_project1` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
-		}
-		catch(PDOException $e)
-		    {
-		    }
+
+	}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `answer` ADD CONSTRAINT `fk_answer_question1` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `answer` ADD CONSTRAINT `fk_answer_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_project_advisor1` FOREIGN KEY (`advisor_name`) REFERENCES `advisor` (`a_name`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_project_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `review` ADD CONSTRAINT `fk_review_project1` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_review_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+		}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "ALTER TABLE `admin` ADD CONSTRAINT `fk_admin_user1` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
+		$conn->exec($sql);
+
+	}  catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
 ?>
 
 													<!-- END PHP INTRO AND BEGIN HTML CONTENT -->
@@ -238,11 +305,12 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 			<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
 			<h1 id="confirmationh1">Your Submission was successful.</h1>
 				<?php
-						$querystring = '';
+						
 						if(isset($_POST)){	
 						foreach ($_POST as $entry)
 							{
-									$querystring = $querystring.$entry.',';	 
+									$querystring = $_POST;
+
 							}
 					
 						//global $_name;
@@ -268,9 +336,11 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$projectSummary = $_POST["textarea1"];
 		       if (isset($db)) {
 		       //inserting into Database
-		   
+		   			
+		   		echo count($querystring);
 
-		$conn = null;
+		       	}
+		
 ?>
 <h2 id="confirmationh2">
 You may now close the page, Thank you for your time!
