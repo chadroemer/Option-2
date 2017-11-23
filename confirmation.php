@@ -4,36 +4,188 @@
 		$host="localhost"; 
 		$user='GreenUser';
 		$pass='GreenPass'; 
-		$db="GreenDBw";
+		$db="344db";
+		$servername = "localhost";
 
 		try {
-		     $dbh = new PDO("mysql:host=$host", $root, $root_password);
+		     $dbh = new PDO("mysql:host=$servername", $root, $root_password);
 
 		        $dbh->exec("CREATE DATABASE IF NOT EXISTS `$db`;
-		                CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
-		                GRANT ALL ON `$db`.* TO '$user'@'localhost';
-		                ") 
-		                or die(print_r($dbh->errorInfo(), true));
+                CREATE USER '$user'@'localhost' IDENTIFIED BY '$pass';
+                GRANT ALL PRIVILEGES ON `$db`.* TO '$user'@'localhost';
+                FLUSH PRIVILEGES;") 
+        or die(print_r($dbh->errorInfo(), true));
 		    } catch (PDOException $e) {
 		        die("DB ERROR: ". $e->getMessage());
 		}
 ?>
 
 <?php
-		$servername = "localhost";
+		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "CREATE TABLE IF NOT EXISTS `admin` ( `user_id` varchar(45) NOT NULL PRIMARY KEY,
+			`rank` int(11) DEFAULT NULL COMMENT '1:Admin\n2:Reviewer\n3:Both',
+			`date` date DEFAULT NULL)";
+			$conn->exec($sql);
 		
-		// Create connection
-		$conn = new mysqli($servername, $user, $pass);
-		// Check connection
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		} 
-		// Create database
-		$sql = "CREATE DATABASE $db";
-		if ($conn->query($sql) === TRUE) {
-		} else {
+		}catch (PDOException $e) {
+			  echo $sql . "<br>" . $e->getMessage();
 		}
-		$conn->close();
+		try {
+		$sql = "LOCK TABLES `admin` WRITE";
+		$conn->exec($sql);
+	}catch (PDOException $e) {
+			  echo $sql . "<br>" . $e->getMessage();
+		}
+	$conn = null;
+?>
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+try {
+	$sql ="CREATE TABLE IF NOT EXISTS `advisor` ( `a_name` varchar(100) NOT NULL,
+	`email` varchar(320) DEFAULT NULL,`dept` varchar(45) DEFAULT NULL,
+	`phone` varchar(10) DEFAULT NULL)";
+	$conn->exec($sql);
+		} catch (PDOException $e) {
+			 echo $sql . "<br>" . $e->getMessage();
+		}
+		try {
+		$sql = "LOCK TABLES `advisor` WRITE";
+		$conn->exec($sql);
+	}catch (PDOException $e) {
+			  echo $sql . "<br>" . $e->getMessage();
+		}
+		$conn = null;
+?>
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		$sql = "CREATE TABLE IF NOT EXISTS `answer`
+		( `user_id` varchar(45) NOT NULL,
+		`question_id` varchar(45) NOT NULL,
+		`project_id` varchar(45) NOT NULL,
+		`answer` varchar(999) DEFAULT NULL,
+		`comment` varchar(999) DEFAULT NULL,
+		PRIMARY KEY (`user_id`,`question_id`,`project_id`))";
+			$conn->exec($sql);
+		} catch (PDOException $e) {
+			echo $sql . "<br>" . $e->getMessage();
+		}
+	try {
+		$sql = "LOCK TABLES `answer` WRITE";
+			$conn->exec($sql);
+	} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+
+?>
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+			$sql = "CREATE TABLE IF NOT EXISTS `project`
+  				( `id` varchar(45) NOT NULL,
+  				`user_id` varchar(45) NOT NULL,
+  				`advisor_name` varchar(100) DEFAULT NULL,
+  				`group_name` varchar(100) DEFAULT NULL,
+  				`title` varchar(350) DEFAULT NULL,
+  				`amount` DOUBLE DEFAULT NULL,
+  				`contact_name` varchar(100) DEFAULT NULL,
+  				`group` varchar(100) DEFAULT NULL,
+  				`completed` tinyint(4) DEFAULT NULL,
+  				PRIMARY KEY (`id`, `user_id`))";
+  				$conn->exec($sql);
+
+		} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	try {
+		$sql = "LOCK TABLES `project` WRITE";
+			$conn->exec($sql);
+	} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+?>
+
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+	$sql = "CREATE TABLE IF NOT EXISTS `question` ( `id` varchar(45) NOT NULL PRIMARY KEY,
+	`text` varchar(999) DEFAULT NULL,`type` varchar(7) DEFAULT NULL COMMENT 
+	'This is important, the types are project, budget, 
+	and review and they correlate to the different phases of our proposal lifecycle')";
+	$conn->exec($sql);
+		} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	try {
+		$sql = "LOCK TABLES `question` WRITE";
+			$conn->exec($sql);
+	} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+
+?>
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		try{
+	$sql = "CREATE TABLE IF NOT EXISTS `review`
+  		( `project_id` varchar(45) NOT NULL,
+ 		`user_id` varchar(45) NOT NULL,
+ 		`r_name` varchar(100) DEFAULT NULL,
+ 		`affiliation` tinyint(4) DEFAULT NULL,
+ 		`comments` varchar(999) DEFAULT NULL,
+ 		`completed` tinyint(4) DEFAULT NULL,
+ 		PRIMARY KEY (`project_id`,`user_id`))";
+ 		$conn->exec($sql);
+		} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	try {
+		$sql = "LOCK TABLES `review` WRITE";
+			$conn->exec($sql);
+	} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
+<?php
+$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		try{
+	$sql = "CREATE TABLE `user` 
+	( `id` varchar(45) NOT NULL PRIMARY KEY,
+	`u_name` varchar(100) DEFAULT NULL, 
+	`campus_affiliation` varchar(45) DEFAULT NULL,
+	`email` varchar(45) DEFAULT NULL,
+	`phone_primary` varchar(45) DEFAULT NULL,
+	`status` varchar(7) DEFAULT NULL)";
+	$conn->exec($sql);
+		} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	try {
+		$sql = "LOCK TABLES `user` WRITE";
+			$conn->exec($sql);
+	} catch (PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+?>
 ?>
 
 <?php
@@ -116,25 +268,7 @@
 		$projectSummary = $_POST["textarea1"];
 		       if (isset($db)) {
 		       //inserting into Database
-		    try {
-		    $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
-		    // set the PDO error mode to exception
-		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-		    $sql = "INSERT INTO GreenTry (projectTitle, Amount, Contact, campusAffiliation, email, 
-		    phoneContact, status, ideaOrigin, groupName, staffAdvisor, advisorEmail, advisorDept, 
-		    advisorPhone, projectSummary)
-		    VALUES ('$projectTitle','$amount', '$contact','$campusAffiliation'
-		    ,'$email','$phoneContact','$status','$ideaOrigin','$groupName',
-		    '$staffAdvisor','$advisorEmail','$advisorDept','$advisorPhone',
-		    '$projectSummary')";
-		    $conn->exec($sql);
-		    }
-		catch(PDOException $e)
-		    {
-		    }
-		    } else {
-		    }
+		   
 
 		$conn = null;
 ?>
