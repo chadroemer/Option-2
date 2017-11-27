@@ -254,9 +254,9 @@
 					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
-					<p>TOTAL REQUESTED: $ </p>
+				<br>
 					<hr id="formHr">
-				<input type="text" name="total" id="total"/>
+				TOTAL REQUESTED: $<input type="text" name="total" id="total"/>
 					<hr>
 					
 					  <script type="text/javascript">
