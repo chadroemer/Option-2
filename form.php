@@ -220,43 +220,56 @@
 
 					<p>Resource Materials:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Educational Supplies:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Student Support:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Staff Support:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Community Member Support:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Promotional Materials:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
 					<p>Other:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
 					
-					<p>TOTAL REQUESTED: $__ this needs to be javascript to add up the inputs </p>
+					<p>TOTAL REQUESTED: $ </p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+				<input type="text" name="total" id="total"/>
 					<hr>
+					
+					  <script type="text/javascript">
+function findTotal(){
+    var arr = document.getElementsByName('Amount');
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total').value = tot;
+}
+
+    </script>
 					
 			 		<p>
 						Email the filled-in budget form, and any additional supporting documents, to: 
