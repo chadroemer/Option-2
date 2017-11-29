@@ -21,21 +21,7 @@
 		  </script>
 </head>
 <body>
- <?php
-session_start();
-$conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT id FROM user");
-    $stmt->execute();
-
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-    $utry = $_SESSION["username"];
-    if ($utry == $result) {
-    	
-     
-    }
-?>	
+ 
  	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
@@ -230,7 +216,7 @@ $conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
 		  </div>
 
 		  <div id="tabs-5">
-			  		<p><u>Download the external budget form.</u></p>
+			  		
 			 		
 			 		<p>
 			 			Please list all of your expenses for the project. Key budget components include total project cost, materials costs, labor costs, annual maintenance costs and annual operations costs. You MUST provide documentation to substantiate the cost of budget items (i.e. vendor proposal, product catalog page, supplier web site, etc.). 
@@ -270,10 +256,10 @@ $conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
 					<hr id="formHr">
 					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
-					<p>TOTAL REQUESTED:</p>
+					TOTAL REQUESTED: $<input type="text" name="total" id="total" required>
 					<hr id="formHr">
-					$<input type="text" name="total" id="total" required>
-					<hr>
+					
+					
 					 <script type="text/javascript">
 						function findTotal(){
    						var arr = document.getElementsByName('Amount');
@@ -287,10 +273,7 @@ $conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
 
     </script>
 					
-			 		<p>
-						Email the filled-in budget form, and any additional supporting documents, to: 
-						<a href="mailto:nengstrom@winona.edu?subject=SGF%20application">NEngstrom@winona.edu</a>
-					</p>
+			 		
 			   
 			    	<hr id="formHr">
 			    	<br>
