@@ -271,7 +271,7 @@ $conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
 					<hr id="formHr">
 					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
-					<p>TOTAL REQUESTED: $ </p>
+					<p>TOTAL REQUESTED:</p>
 					<hr id="formHr">
 					$<input type="text" name="total" id="total" required>
 					<hr>
