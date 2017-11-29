@@ -188,6 +188,9 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 ?>
 
 <?php
+	for ($i=0; $i < 1; $i++) { 
+		
+	
 		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -196,10 +199,12 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$conn->exec($sql);
 
 	}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+		
 	}
+}
 ?>
 <?php
+
 		$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -207,7 +212,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `answer` ADD CONSTRAINT `fk_answer_question1` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 ?>
 <?php
@@ -218,7 +223,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `answer` ADD CONSTRAINT `fk_answer_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+
 	}
 ?>
 <?php
@@ -229,7 +234,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_project_advisor1` FOREIGN KEY (`advisor_name`) REFERENCES `advisor` (`a_name`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+		
 	}
 ?>
 <?php
@@ -240,7 +245,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_project_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+		
 	}
 ?>
 <?php
@@ -251,7 +256,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `review` ADD CONSTRAINT `fk_review_project1` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+
 	}
 ?>
 <?php
@@ -262,7 +267,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "ALTER TABLE `project` ADD CONSTRAINT `fk_review_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION";
 		$conn->exec($sql);
 		}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 ?>
 <?php
@@ -274,7 +279,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$conn->exec($sql);
 
 	}  catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 ?>
 
@@ -320,12 +325,10 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 			</h1>
 	</div>
 <?php
-		$projectTitle = $_POST["projectTitle"];
+		
 		$amount = $_POST["Amount"];
-		$contact = $_POST["Contact"];
 		$campusAffiliation = $_POST["campusAffiliation"];
 		$email = $_POST["email"];
-		$phoneContact = $_POST["phoneContact"];
 		$status = $_POST["status"];
 		$ideaOrigin = $_POST["ideaOrigin"];
 		$groupName = $_POST["groupName"];
@@ -333,12 +336,63 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$advisorEmail = $_POST["advisorEmail"];
 		$advisorDept = $_POST["advisorDept"];
 		$advisorPhone = $_POST["advisorPhone"];
-		$projectSummary = $_POST["textarea1"];
-		       if (isset($db)) {
-		       //inserting into Database
-		   			
-		   		echo count($querystring);
+		$u = $_POST["user_id"];
+		$un = $_POST["u_name"];
+		$p = $_POST["Phone"];
+		$s = $_POST["status"];
+		$projectTitle = $_POST["projectTitle"];
 
+
+		       if (isset($db)) {
+		       //inserting into Databas
+		       	$conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
+
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	try {
+		       		$sql = "INSERT INTO `user` (`id`, `u_name`, `campus_affiliation`, `email`, `phone_primary`, `status`) VALUES ('$u','$un','$campusAffiliation','$email','$p','$s')";
+		       		$conn->exec($sql);
+		       	}catch(PDOException $e)
+		       	{
+		       		  echo $sql . "<br>" . $e->getMessage();
+		       	}
+		       		$questiona = file("questions.txt");
+		       		try {
+		       		for ($i=0; $i<count($questiona) ; $i++) { 
+		       			$x = $i+1;
+		       			$sql = "INSERT INTO `question` (`id`, `text`, `type`) VALUES ('$x', '$questiona[$i]', 'review')";
+		       			$conn->exec($sql);
+		       		}
+		       		}catch(PDOException $e)
+		       	{
+		       		  echo $sql . "<br>" . $e->getMessage();
+		       	}
+
+		       	try {
+		       		$sql = "INSERT INTO `advisor`(`a_name`,`email`, `dept`, `phone`) VALUES ('$staffAdvisor','$advisorEmail', '$advisorDept', '$advisorPhone')";
+		       		$conn->exec($sql);
+		       	} catch (PDOException $e) {
+		       		
+		       		  echo $sql . "<br>" . $e->getMessage();
+		       	}
+		       		try {
+		       		$sql = "INSERT INTO `project`(`id`,`user_id`, `advisor_name`, `group_name`, `title`, `amount`, `contact_name`, `group`, `completed`) VALUES ('$u+$groupName','$u', '$staffAdvisor', '$groupName', '$projectTitle', '$amount','$staffAdvisor','$groupName', '0')";
+		       		$conn->exec($sql);
+		       	} catch (PDOException $e) {
+		       		
+		       		  echo $sql . "<br>" . $e->getMessage();
+		       	}
+
+		       	$answers = array();
+		       	try {
+		       		for ($i=1; $i<13 ; $i++) { 
+		       			$answers = $_POST["question$i"];
+		       			
+		       			$sql = "INSERT INTO `answer` (`user_id`, `question_id`, `project_id`, `answer`, `comment`) VALUES ('$u', '$i', '$u+$groupName', '$answers', '$answers')";
+		       			$conn->exec($sql);
+		       		}
+		       	} catch (PDOException $e) {
+		       		echo $sql . "<br>" . $e->getMessage();
+		       	}
 		       	}
 		
 ?>
