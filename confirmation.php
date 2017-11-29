@@ -31,13 +31,13 @@
 			$conn->exec($sql);
 		
 		}catch (PDOException $e) {
-			  echo $sql . "<br>" . $e->getMessage();
+			 
 		}
 		try {
 		$sql = "LOCK TABLES `admin` WRITE";
 		$conn->exec($sql);
 	}catch (PDOException $e) {
-			  echo $sql . "<br>" . $e->getMessage();
+			 
 		}
 	$conn = null;
 ?>
@@ -52,13 +52,13 @@ try {
 	`phone` varchar(10) DEFAULT NULL)";
 	$conn->exec($sql);
 		} catch (PDOException $e) {
-			 echo $sql . "<br>" . $e->getMessage();
+	
 		}
 		try {
 		$sql = "LOCK TABLES `advisor` WRITE";
 		$conn->exec($sql);
 	}catch (PDOException $e) {
-			  echo $sql . "<br>" . $e->getMessage();
+
 		}
 		$conn = null;
 ?>
@@ -76,13 +76,13 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		PRIMARY KEY (`user_id`,`question_id`,`project_id`))";
 			$conn->exec($sql);
 		} catch (PDOException $e) {
-			echo $sql . "<br>" . $e->getMessage();
+		
 		}
 	try {
 		$sql = "LOCK TABLES `answer` WRITE";
 			$conn->exec($sql);
 	} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	$conn = null;
 
@@ -106,13 +106,13 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
   				$conn->exec($sql);
 
 		} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	try {
 		$sql = "LOCK TABLES `project` WRITE";
 			$conn->exec($sql);
 	} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	$conn = null;
 ?>
@@ -128,13 +128,13 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 	and review and they correlate to the different phases of our proposal lifecycle')";
 	$conn->exec($sql);
 		} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	try {
 		$sql = "LOCK TABLES `question` WRITE";
 			$conn->exec($sql);
 	} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	$conn = null;
 
@@ -154,13 +154,13 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
  		PRIMARY KEY (`project_id`,`user_id`))";
  		$conn->exec($sql);
 		} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 	try {
 		$sql = "LOCK TABLES `review` WRITE";
 			$conn->exec($sql);
 	} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 ?>
 <?php
@@ -183,7 +183,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		$sql = "LOCK TABLES `user` WRITE";
 			$conn->exec($sql);
 	} catch (PDOException $e) {
-		echo $sql . "<br>" . $e->getMessage();
+	
 	}
 ?>
 
@@ -326,7 +326,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 	</div>
 <?php
 		
-		$amount = $_POST["Amount"];
+		$amount = $_POST["total"];
 		$campusAffiliation = $_POST["campusAffiliation"];
 		$email = $_POST["email"];
 		$status = $_POST["status"];
@@ -353,7 +353,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		       		$conn->exec($sql);
 		       	}catch(PDOException $e)
 		       	{
-		       		  echo $sql . "<br>" . $e->getMessage();
+		       		
 		       	}
 		       		$questiona = file("questions.txt");
 		       		try {
@@ -364,7 +364,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		       		}
 		       		}catch(PDOException $e)
 		       	{
-		       		  echo $sql . "<br>" . $e->getMessage();
+		       	
 		       	}
 
 		       	try {
@@ -372,14 +372,14 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		       		$conn->exec($sql);
 		       	} catch (PDOException $e) {
 		       		
-		       		  echo $sql . "<br>" . $e->getMessage();
+		       		
 		       	}
 		       		try {
 		       		$sql = "INSERT INTO `project`(`id`,`user_id`, `advisor_name`, `group_name`, `title`, `amount`, `contact_name`, `group`, `completed`) VALUES ('$u+$groupName','$u', '$staffAdvisor', '$groupName', '$projectTitle', '$amount','$staffAdvisor','$groupName', '0')";
 		       		$conn->exec($sql);
 		       	} catch (PDOException $e) {
 		       		
-		       		  echo $sql . "<br>" . $e->getMessage();
+		       	
 		       	}
 
 		       	$answers = array();
@@ -391,7 +391,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$db", $user, $pass);
 		       			$conn->exec($sql);
 		       		}
 		       	} catch (PDOException $e) {
-		       		echo $sql . "<br>" . $e->getMessage();
+		       	
 		       	}
 		       	}
 		

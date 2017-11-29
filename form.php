@@ -8,9 +8,9 @@
 	<link rel="icon" href="photos/greenFee.png">
 	<link rel="stylesheet" type="text/css" href="option2.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script type="text/javascript" src="option2.js" > </script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="option2.js" type="text/javascript"></script>
     <title>Application Form</title>
 		  <script>
 		  $( function() {
@@ -21,7 +21,22 @@
 		  </script>
 </head>
 <body>
- 	
+ <?php
+session_start();
+$conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SELECT id FROM user");
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+    $utry = $_SESSION["username"];
+    if ($utry == $result) {
+    	
+     
+    }
+
+?>	
  	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
@@ -46,30 +61,30 @@
 				<form id="FormTab1" action="confirmation.php" method="post">
 				<p>Star ID:</p>
 					<hr id="formHr">
-					<input type="text" name="projectTitle" id="inputSize" required>
+					<input type="text" name="user_id" id="inputSize" required>
 
 		
 				<p>Username:</p>
 					<hr id="formHr">
-					<input type="text" name="Amount" id="inputSize" required>
+					<input type="text" name="u_name" id="inputSize" required>
 
 				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
 					<hr id="formHr">
-					<input type="text" name="Contact" id="inputSize" required> 
+					<input type="text" name="campusAffiliation" id="inputSize" required> 
 
 				<p>Email Address</p>
 					<hr id="formHr">
-					<input type="text" name="campusAffiliation" id="inputSize" required>
+					<input type="text" name="email" id="inputSize" required>
 
 				<p>Phone Number:</p>
 					<hr id="formHr">
-					<input type="text" name="email" id="inputSize" required>
+					<input type="text" name="Phone" id="inputSize" required>
 
 
 				<p>Status:</p>
 					<hr id="formHr">
 					  	<input type="radio" name="status" value="student">Student<br>
-	  					<input type="radio" name="status" value="staff" onclick="removeDummy();" >Staff<br>
+	  					<input type="radio" name="status" value="staff" onclick="removeDummy();">Staff<br>
 	  					<input type="radio" name="status" value="other">Other
 
 					<br><br>
@@ -86,6 +101,9 @@
 		  </div>
 
 		  <div id="tabs-3">
+		  		<p>Project Title:</p>
+		  			<hr id="formHr">
+		  			<input type="text" name="projectTitle" id="inputSize" required>
 			    <p>Name of Group(student org., campus dept., etc.):</p>
 					<hr id="formHr">
 					<input type="text" name="groupName" id="inputSize" required>
@@ -116,7 +134,7 @@
 			    <p>Project includes opportunities for student involvement and/or will positively impact the student experience.</p>
 			    	<hr id="formHr">
 
-			    	<textarea name="textarea1" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question1" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -124,7 +142,7 @@
 			    <p>Project directly addresses environmental sustainability on the WSU campus or in the capacity that on-campus activities directly influence environmental sustainability in the surrounding community..</p>
 			    	<hr id="formHr">
 
-			    	<textarea name="textarea2" style="width:100%;height:100px;"></textarea>	
+			    	<textarea name="question2" style="width:100%;height:100px;"></textarea>	
 
 			    	<hr>
 
@@ -132,7 +150,7 @@
 			    <p>Project is feasible and has support from appropriate campus individuals and entities. Individual students or student organizations must have the signature of a faculty or staff advisor who is committed to advising throughout project implementation</p>
 			    	<hr id="formHr">
 
-			    	<textarea name="textarea3" style="width:100%;height:100px;"></textarea>	
+			    	<textarea name="question3" style="width:100%;height:100px;"></textarea>	
 
 			    	<hr>
 
@@ -140,7 +158,7 @@
 			    <p>Project schedule and budget are reasonable and conform to established timelines, constraints and parameters.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
-			    	<textarea name="textarea4" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question4" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -148,7 +166,7 @@
 			    <p>Project includes mechanism for evaluation and follow-up. At a minimum, a project plan includes appropriate progress reports to the Sustainability Committee based on the duration of the project and a final report within 60 days following completion of the project</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
-			    	<textarea name="textarea5" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question5" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 				
@@ -156,7 +174,7 @@
 			    <p>Project is innovative in nature and does not include routine maintenance or code-compliant activities. Funding may support narrowing the gap between code-compliant and more sustainable alternatives</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectOutcome" class="tab4text"> -->
-			    	<textarea name="textarea6" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question6" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -164,7 +182,7 @@
 			    <p>Project demonstrates a reduction in WSU\'s carbon footprint or provides other environmental benefits such as water conservation, storm water management, biodiversity conservation, and waste minimization.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectBenchmark" class="tab4text"> -->
-			    	<textarea name="textarea7" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question7" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -172,7 +190,7 @@
 			    <p>Project provides intellectual and emotional linkage with the unique landscape of the Driftless Area/ Mississippi River, as well as the cultural lifeways of this special place.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectAccountability" class="tab4text"> -->
-			    	<textarea name="textarea8" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question8" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -180,7 +198,7 @@
 			    <p> Project considers interdisciplinary and experiential education and outreach opportunities and has included them as part of its implementation plan.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSavings" class="tab4text"> -->
-			    	<textarea name="textarea9" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question9" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -188,7 +206,7 @@
 			    <p>Project includes matching funds from sources beyond SGF or includes a plan for sustained funding.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSufficiency" class="tab4text"> -->
-			    	<textarea name="textarea10" style="width:100%;height:100px;" type="project"></textarea>
+			    	<textarea name="question10" style="width:100%;height:100px;" type="project"></textarea>
 
 			    	<hr>
 
@@ -196,7 +214,7 @@
 			    <p>Project has potential to be scalable across the campus.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectLifespan" class="tab4text"> -->
-			    	<textarea name="textarea11" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question11" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -204,7 +222,7 @@
 			    <p>Project proposal outlines project payback, lifecycle costs and savings, etc.</p>
 			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSustainability" class="tab4text"> -->
-			    	<textarea name="textarea12" style="width:100%;height:100px;"></textarea>
+			    	<textarea name="question12" style="width:100%;height:100px;"></textarea>
 
 			    	<hr>
 
@@ -253,22 +271,20 @@
 					<hr id="formHr">
 					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr>
-					
-				<br>
+					<p>TOTAL REQUESTED: $ </p>
 					<hr id="formHr">
-				TOTAL REQUESTED: $<input type="text" name="total" id="total"/>
+					$<input type="text" name="total" id="total" required>
 					<hr>
-					
-					  <script type="text/javascript">
-function findTotal(){
-    var arr = document.getElementsByName('Amount');
-    var tot=0;
-    for(var i=0;i<arr.length;i++){
-        if(parseInt(arr[i].value))
-            tot += parseInt(arr[i].value);
-    }
-    document.getElementById('total').value = tot;
-}
+					 <script type="text/javascript">
+						function findTotal(){
+   						var arr = document.getElementsByName('Amount');
+  						 var tot=0;
+	  					  for(var i=0;i<arr.length;i++){
+	 					       if(parseInt(arr[i].value))
+      				      tot += parseInt(arr[i].value);
+    					}
+   				 document.getElementById('total').value = tot;
+					}
 
     </script>
 					
