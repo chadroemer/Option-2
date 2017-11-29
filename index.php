@@ -94,11 +94,11 @@
 
 			<p>Green Fee Portal Login</p>
 
-			<div id="greenFeeLogoLogin">
+			<!-- <div id="greenFeeLogoLogin">
 				
 				<img src="photos/greenFee.png" id="greenFeeLoginImage">
 
-			</div>
+			</div> -->
 
 			<!-- <p>Green Fee Portal Login</p> -->
 			<hr>

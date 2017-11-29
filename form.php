@@ -35,7 +35,6 @@ $conn = new PDO("mysql:host=localhost;dbname=344db", 'GreenUser', 'GreenPass');
     	
      
     }
-
 ?>	
  	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
