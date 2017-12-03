@@ -22,18 +22,6 @@ p {
     font-size: 1em;
 }
 
-#green {
-    background-color: green;
-}
-
-#formP {
-    font-family: Open Sans;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 1em;
-    display: inline;
-}
-
 .index {
     background-image: url("photos/sugarLoaf.jpg");
     background-size: cover;
@@ -267,6 +255,18 @@ p {
 #dollar{
     float: right;
     margin-left: 1%;
+}
+
+#green {
+    background-color: green;
+}
+
+#formP {
+    font-family: Open Sans;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1em;
+    display: inline;
 }
 
 /*

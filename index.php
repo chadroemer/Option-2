@@ -91,15 +91,7 @@
 	</div>
 	<div class="indexMain" id="rightIndex">
 		<div id="loginForm">
-
 			<p>Green Fee Portal Login</p>
-
-			<!-- <div id="greenFeeLogoLogin">
-				
-				<img src="photos/greenFee.png" id="greenFeeLoginImage">
-
-			</div> -->
-
 			<!-- <p>Green Fee Portal Login</p> -->
 			<hr>
 			<form method="POST"> 

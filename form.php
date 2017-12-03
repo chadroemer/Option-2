@@ -257,11 +257,9 @@
 		  </div>
 
 		  <div id="tabs-5">
-			  		
 			 		<p>
 			 			Please list all of your expenses for the project. Key budget components include total project cost, materials costs, labor costs, annual maintenance costs and annual operations costs. You MUST provide documentation to substantiate the cost of budget items (i.e. vendor proposal, product catalog page, supplier web site, etc.). 
 			 		</p>
-
 			 	<div id="indiv">
 					<p id="formP">Resource Materials:</p>
 					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
@@ -315,7 +313,6 @@
 				<br>
 				<br>
 				<hr id="formHr">
-					
 					<script type="text/javascript">
 						function findTotal(){
    						var arr = document.getElementsByName('Amount');
@@ -327,7 +324,6 @@
    				 		document.getElementById('total').value = tot;
 					}
     				</script>
-			   
 			    	<br>
 						<input id="submitButton" type="submit" value="Submit Form">
 						<!-- <button id="submitButton" type="submit" value="Submit Form" formaction="#">Submit <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
@@ -337,8 +333,6 @@
 	</div>
 </form>
 </div>
-
 <!-- ʕ•́ᴥ•̀ʔ -->
-
 </body>
 </html>
