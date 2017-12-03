@@ -21,18 +21,12 @@
 		  </script>
 </head>
 <body>
- 
  	<div id="header">
 		<img id="mainInfoPic" src="photos/WinonaWhite.png">		
 	</div>
 
 	<div id="greenFeeIntro">
-		<form action="" id="greenForm">
-			
-		</form>
-		 
 	<div id="greenFeeFormContent">
-
 	<div id="tabs">
 		  <ul>
 		    <li><a href="#tabs-1" id="button1">User Info</a></li>

@@ -2,18 +2,13 @@
 	if(isset($_POST['username']) && isset($_POST['password']))
 	{
 		$dc = "ldap://dc1.winona.edu";
-	
 		$dc_connect = ldap_connect($dc);
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-
 		$dc_connect_user = 'winona' . "\\" . $username;
-
 		ldap_set_option($dc_connect, LDAP_OPT_PROTOCOL_VERSION, 3);
 		ldap_set_option($dc_connect, LDAP_OPT_REFERRALS, 0);
-
 		$bind = @ldap_bind($dc_connect, $dc_connect_user, $password);
-
 		if ($bind) 
 		{
 			$filter="(sAMAccountName=$username)";
@@ -105,8 +100,6 @@
 		</div>
 	</div>
 </div>
-
 	<!-- ʕ•́ᴥ•̀ʔ -->
-
 </body>
 </html>
