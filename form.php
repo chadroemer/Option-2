@@ -35,232 +35,288 @@
 
 	<div id="tabs">
 		  <ul>
-		    <li><a href="#tabs-1">User Info</a></li>
-		    <li><a href="#tabs-2">Group Info</a></li>
-		    <li><a href="#tabs-3">Project</a></li>
-		    <li><a href="#tabs-4">Questions</a></li>
-		    <li><a href="#tabs-5">Budget</a></li>
+		    <li><a href="#tabs-1" id="button1">User Info</a></li>
+		    <li><a href="#tabs-2" id="button2">Group Info</a></li>
+		    <li><a href="#tabs-3" id="button3">Project</a></li>
+		    <li><a href="#tabs-4" id="button4">Questions</a></li>
+		    <li><a href="#tabs-5" id="button5">Budget</a></li>
 		  </ul>
 		  <div id="tabs-1">
 			
 				<form id="FormTab1" action="confirmation.php" method="post">
-				<p>Star ID:</p>
-					<hr id="formHr">
+			<div id="indiv">
+				<p id="formP">Star ID:</p>
 					<input type="text" name="user_id" id="inputSize" required>
-
+					<hr id="formHr">
+			</div>
+			<br>
 		
-				<p>Username:</p>
-					<hr id="formHr">
+			<div id="indiv">
+				<p id="formP">Username:</p>
 					<input type="text" name="u_name" id="inputSize" required>
-
-				<p>Campus Affiliation (Name of Organization, Department, or Office):</p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Campus Affiliation (Name of Organization, Department, or Office):</p>
 					<input type="text" name="campusAffiliation" id="inputSize" required> 
-
-				<p>Email Address</p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Email Address</p>
 					<input type="text" name="email" id="inputSize" required>
-
-				<p>Phone Number:</p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Phone Number:</p>
 					<input type="text" name="Phone" id="inputSize" required>
-
-
-				<p>Status:</p>
 					<hr id="formHr">
-					  	<input type="radio" name="status" value="student">Student<br>
-	  					<input type="radio" name="status" value="staff" onclick="removeDummy();">Staff<br>
-	  					<input type="radio" name="status" value="other">Other
+			</div>
+			<br>
 
-					<br><br>
+			<div id="indiv">
+				<p id="formP">Status:</p>
+				<br>
+					<input type="radio" name="status" value="student">Student<br>
+	  				<input type="radio" name="status" value="staff" onclick="removeDummy();">Staff<br>
+	  				<input type="radio" name="status" value="other">Other
+	  				<hr id="formHr">
+	  		</div>
+	  		<br>
+			<br><br>
 			
-
 		  </div>
 		  <div id="tabs-2">
 			    <p><strong>As a Student, Choose One of These Options:</strong></p>
-			   
-			    	<hr id="formHr">
 					<input type="radio" name="ideaOrigin" value="one">This Project is Soley My Own.<br><br>
 	  				<input type="radio" name="ideaOrigin" value="group">This Project is Proposed on Behalf of a Group.<br>
-		
+	  				<hr id="formHr">
 		  </div>
 
 		  <div id="tabs-3">
-		  		<p>Project Title:</p>
-		  			<hr id="formHr">
+
+		  	<div id="indiv">
+		  		<p id="formP">Project Title:</p>
 		  			<input type="text" name="projectTitle" id="inputSize" required>
-			    <p>Name of Group(student org., campus dept., etc.):</p>
-					<hr id="formHr">
+		  			<hr id="formHr">
+		  	</div>
+		  	<br>
+
+		  	<div id="indiv">
+			    <p id="formP">Name of Group(student org., campus dept., etc.):</p>
 					<input type="text" name="groupName" id="inputSize" required>
-
-				<p>Name of Faculty or Staff Project Advisor: </p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Name of Faculty or Staff Project Advisor: </p>
 					<input type="text" name="staffAdvisor" id="inputSize" required>
-
-				<p>Advisor's Email Address:</p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Advisor's Email Address:</p>
 					<input type="text" name="advisorEmail" id="inputSize" required> 
-
-				<p>Advisor's Department or Organization:</p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Advisor's Department or Organization:</p>
 					<input type="text" name="advisorDept" id="inputSize" required>
-
-				<p>Advisor's Phone Number(s): </p>
 					<hr id="formHr">
+			</div>
+			<br>
+
+			<div id="indiv">
+				<p id="formP">Advisor's Phone Number(s): </p>
 					<input type="text" name="advisorPhone" id="inputSize" required>
+					<hr id="formHr">
+			</div>
+			<br>
 		  </div>
 
 		  <div id="tabs-4">
+
 			    <p><strong><u>Instructions:</u></strong> Please fill in answers to the the following 10 questions. You may copy and paste your text from another document, if you wish. </p>
 			    	<hr id="formHr"> 
 			    	<br>
 
+			<div id="indiv">
 			    <p class="tab4p"><strong>1. Student Experience</strong></p>
 			    <p>Project includes opportunities for student involvement and/or will positively impact the student experience.</p>
-			    	<hr id="formHr">
-
 			    	<textarea name="question1" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>2. Connection to Campus</strong></p>
 			    <p>Project directly addresses environmental sustainability on the WSU campus or in the capacity that on-campus activities directly influence environmental sustainability in the surrounding community..</p>
-			    	<hr id="formHr">
-
 			    	<textarea name="question2" style="width:100%;height:100px;"></textarea>	
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    	<p class="tab4p"><strong>3. Feasibility and Institutional Support</strong></p>
 			    <p>Project is feasible and has support from appropriate campus individuals and entities. Individual students or student organizations must have the signature of a faculty or staff advisor who is committed to advising throughout project implementation</p>
-			    	<hr id="formHr">
-
 			    	<textarea name="question3" style="width:100%;height:100px;"></textarea>	
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 				<p class="tab4p"><strong>4. Appropriateness of Schedule and Budget Request</strong></p>
 			    <p>Project schedule and budget are reasonable and conform to established timelines, constraints and parameters.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
 			    	<textarea name="question4" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>5.Accountability </strong></p>
 			    <p>Project includes mechanism for evaluation and follow-up. At a minimum, a project plan includes appropriate progress reports to the Sustainability Committee based on the duration of the project and a final report within 60 days following completion of the project</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="studentInput" class="tab4text"> -->
 			    	<textarea name="question5" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-				
+			<div id="indiv">
 				<p class="tab4p"><strong>6. Innovation</strong></p>
 			    <p>Project is innovative in nature and does not include routine maintenance or code-compliant activities. Funding may support narrowing the gap between code-compliant and more sustainable alternatives</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectOutcome" class="tab4text"> -->
 			    	<textarea name="question6" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>7. Environmental Benefits</strong></p>
 			    <p>Project demonstrates a reduction in WSU\'s carbon footprint or provides other environmental benefits such as water conservation, storm water management, biodiversity conservation, and waste minimization.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectBenchmark" class="tab4text"> -->
 			    	<textarea name="question7" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>8. Regional Connection</strong></p>
 			    <p>Project provides intellectual and emotional linkage with the unique landscape of the Driftless Area/ Mississippi River, as well as the cultural lifeways of this special place.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectAccountability" class="tab4text"> -->
 			    	<textarea name="question8" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>9.Outreach and Education</strong></p>
 			    <p> Project considers interdisciplinary and experiential education and outreach opportunities and has included them as part of its implementation plan.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSavings" class="tab4text"> -->
 			    	<textarea name="question9" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>10.Self Sufficiency</strong></p>
 			    <p>Project includes matching funds from sources beyond SGF or includes a plan for sustained funding.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSufficiency" class="tab4text"> -->
 			    	<textarea name="question10" style="width:100%;height:100px;" type="project"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>11. Potential for Broad Application</strong></p>
 			    <p>Project has potential to be scalable across the campus.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectLifespan" class="tab4text"> -->
 			    	<textarea name="question11" style="width:100%;height:100px;"></textarea>
+			    	<hr id="formHr">
+			</div>
+			<br>
 
-			    	<hr>
-
+			<div id="indiv">
 			    <p class="tab4p"><strong>12. Cost/Benefit Analysis (as appropriate)</strong></p>
 			    <p>Project proposal outlines project payback, lifecycle costs and savings, etc.</p>
-			    	<hr id="formHr">
 			    	<!-- <input type="text" name="projectSustainability" class="tab4text"> -->
 			    	<textarea name="question12" style="width:100%;height:100px;"></textarea>
-
-			    	<hr>
-
-			 
-			    	<br><br>
+			    	<hr id="formHr">
+			</div>
+			<br>
+			<br><br>
 		  </div>
 
 		  <div id="tabs-5">
 			  		
-			 		
 			 		<p>
 			 			Please list all of your expenses for the project. Key budget components include total project cost, materials costs, labor costs, annual maintenance costs and annual operations costs. You MUST provide documentation to substantiate the cost of budget items (i.e. vendor proposal, product catalog page, supplier web site, etc.). 
 			 		</p>
 
-					<p>Resource Materials:</p>
+			 	<div id="indiv">
+					<p id="formP">Resource Materials:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Educational Supplies:</p>
+				</div>
+				<br>
+
+				<div id="indiv">	
+					<p id="formP">Educational Supplies:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Student Support:</p>
+				</div>
+				<br>
+				
+				<div id="indiv">
+					<p id="formP">Student Support:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Staff Support:</p>
+				</div>
+				<br>
+
+				<div id="indiv">
+					<p id="formP">Staff Support:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Community Member Support:</p>
+				</div>
+				<br>
+
+				<div id="indiv">	
+					<p id="formP">Community Member Support:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Promotional Materials:</p>
+				</div>
+				<br>
+
+				<div id="indiv">
+					<p id="formP">Promotional Materials:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					
-					<p>Other:</p>
+				</div>
+				<br>
+
+				<div id="indiv">
+					<p id="formP">Other:</p>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
 					<hr id="formHr">
-					<input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
-					<hr>
-					TOTAL REQUESTED: $<input type="text" name="total" id="total" required>
-					<hr id="formHr">
+				</div>
+				<br>
+
+				<span id="dollar">$</span> TOTAL REQUESTED: <input type="text" name="total" id="total" required>
+				<br>
+				<br>
+				<hr id="formHr">
 					
-					
-					 <script type="text/javascript">
+					<script type="text/javascript">
 						function findTotal(){
    						var arr = document.getElementsByName('Amount');
   						 var tot=0;
@@ -268,17 +324,14 @@
 	 					       if(parseInt(arr[i].value))
       				      tot += parseInt(arr[i].value);
     					}
-   				 document.getElementById('total').value = tot;
+   				 		document.getElementById('total').value = tot;
 					}
-
-    </script>
-					
-			 		
+    				</script>
 			   
-			    	<hr id="formHr">
 			    	<br>
 						<input id="submitButton" type="submit" value="Submit Form">
 						<!-- <button id="submitButton" type="submit" value="Submit Form" formaction="#">Submit <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
+					<br>
 					<br>
 		  </div>
 	</div>

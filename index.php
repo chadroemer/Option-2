@@ -104,9 +104,9 @@
 			<hr>
 			<form method="POST"> 
 				<p><i class="fa fa-user" aria-hidden="true"></i> Please type in StarID/Username: </p>
-				<input type="text" name="username" id="inputSize" placeholder="Username">
+				<input type="text" name="username" id="inputSizeIndex" placeholder="Username">
 				<p><i class="fa fa-unlock-alt" aria-hidden="true"></i> Please type in Password: </p>
-				<input type="Password" name="password" id="inputSize" placeholder="Password">
+				<input type="Password" name="password" id="inputSizeIndex" placeholder="Password">
 				<br><br>
 				<button id="loginButton" type="submit" formaction="#">Login <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
 			</form>

@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-    /*background-color: #491799;*/
-    /*background-color: #b4b9c1;*/
     background-color: #d6d4d8;
-    /*	padding-left: 15%;
-	padding-right: 15%;*/
     margin: 0%;
 }
 
@@ -26,10 +22,21 @@ p {
     font-size: 1em;
 }
 
+#green {
+    background-color: green;
+}
+
+#formP {
+    font-family: Open Sans;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1em;
+    display: inline;
+}
+
 .index {
     background-image: url("photos/sugarLoaf.jpg");
     background-size: cover;
-    /*width: 100%;*/
 }
 
 .indexMain {
@@ -83,6 +90,12 @@ p {
     word-break: break-word;
 }
 
+#indiv{
+    background-color: #E9E9E9;
+    padding: 1%;
+    border-radius: 2px;
+}
+
 #loginForm {
     margin-left: 20%;
     margin-right: 20%;
@@ -113,6 +126,15 @@ p {
 }
 
 #inputSize {
+    width: 45%;
+    height: 25px;
+    border: 1px solid black;
+    float: right;
+    border-radius: 2px;
+    margin-bottom: 1%;
+}
+
+#inputSizeIndex {
     width: 100%;
     height: 25px;
     border: 1px solid black;
@@ -140,8 +162,6 @@ p {
 }
 
 #greenFeeIntro{
-	/*background-color: rgba(255, 255, 255, 0.8);*/
-	/*box-shadow: 0px 10px 64px 0px rgba(0,0,0,0.75);*/
     box-shadow: 10px 0px 0px 0px #888888; 
 	border-top: none;
 	color: black;
@@ -151,7 +171,6 @@ p {
 
 #greenFeeIntroIndex{
     background-color: rgba(255, 255, 255, 0.8);
-    /*box-shadow: 0px 0px 40px 0px rgba(255,255,255,1);*/
     box-shadow: 0px 15px 64px 0px rgba(0,0,0,0.75);
     border-top: none;
     color: black;
@@ -212,7 +231,6 @@ p {
 #formHr {
     width: 95%;
     border: 1px solid #4B08A1;
-    /*box-shadow: 0px -3px 5px 0px rgba(105,105,105,1);*/
     box-shadow: 0px -5px 22px 0px rgba(120,119,120,1);
 
 }
@@ -240,6 +258,21 @@ p {
 	margin-left: auto;
 	width: 100%;
 }
+
+#total {
+    float: right;
+    margin-right: 1%;
+}
+
+#dollar{
+    float: right;
+    margin-left: 1%;
+}
+
+/*
+#button1:active {
+    background-color: green;
+}*/
 
 @import "bourbon";
 
