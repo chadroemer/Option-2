@@ -76,9 +76,9 @@
 			<div id="indiv">
 				<p id="formP">Status:</p>
 				<br>
-					<input type="radio" name="status" value="student">Student<br>
+					<input type="radio" name="status" value="student" onclick="showDummy();">Student<br>
 	  				<input type="radio" name="status" value="staff" onclick="removeDummy();">Staff<br>
-	  				<input type="radio" name="status" value="other">Other
+	  				<input type="radio" name="status" value="other" onclick="showDummy();">Other
 	  				<hr id="formHr">
 	  		</div>
 	  		<br>
@@ -96,42 +96,42 @@
 
 		  	<div id="indiv">
 		  		<p id="formP">Project Title:</p>
-		  			<input type="text" name="projectTitle" id="inputSize" required>
+		  			<input type="text" name="projectTitle" id="inputSize" >
 		  			<hr id="formHr">
 		  	</div>
 		  	<br>
 
 		  	<div id="indiv">
 			    <p id="formP">Name of Group(student org., campus dept., etc.):</p>
-					<input type="text" name="groupName" id="inputSize" required>
+					<input type="text" name="groupName" id="inputSize" >
 					<hr id="formHr">
 			</div>
 			<br>
 
 			<div id="indiv">
 				<p id="formP">Name of Faculty or Staff Project Advisor: </p>
-					<input type="text" name="staffAdvisor" id="inputSize" required>
+					<input type="text" name="staffAdvisor" id="inputSize" >
 					<hr id="formHr">
 			</div>
 			<br>
 
 			<div id="indiv">
 				<p id="formP">Advisor's Email Address:</p>
-					<input type="text" name="advisorEmail" id="inputSize" required> 
+					<input type="text" name="advisorEmail" id="inputSize" > 
 					<hr id="formHr">
 			</div>
 			<br>
 
 			<div id="indiv">
 				<p id="formP">Advisor's Department or Organization:</p>
-					<input type="text" name="advisorDept" id="inputSize" required>
+					<input type="text" name="advisorDept" id="inputSize">
 					<hr id="formHr">
 			</div>
 			<br>
 
 			<div id="indiv">
 				<p id="formP">Advisor's Phone Number(s): </p>
-					<input type="text" name="advisorPhone" id="inputSize" required>
+					<input type="text" name="advisorPhone" id="inputSize" >
 					<hr id="formHr">
 			</div>
 			<br>
@@ -303,7 +303,7 @@
 				</div>
 				<br>
 
-				<span id="dollar">$</span> TOTAL REQUESTED: <input type="text" name="total" id="total" required>
+				<span id="dollar">$</span> TOTAL REQUESTED: <input type="text" name="total" id="total" required readonly>
 				<br>
 				<br>
 				<hr id="formHr">
