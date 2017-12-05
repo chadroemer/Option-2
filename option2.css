@@ -121,6 +121,15 @@ p {
     border-radius: 2px;
     margin-bottom: 1%;
 }
+#inputSize2 {
+    width: 15%;
+    height: 25px;
+    border: 1px solid black;
+    float: right;
+    border-radius: 2px;
+    margin-bottom: 1%;
+	text-align:right;
+}
 
 #inputSizeIndex {
     width: 100%;

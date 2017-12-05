@@ -256,49 +256,49 @@
 			 		</p>
 			 	<div id="indiv">
 					<p id="formP">Resource Materials:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required >
 					<hr id="formHr">
 				</div>
 				<br>
 
 				<div id="indiv">	
 					<p id="formP">Educational Supplies:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
 				
 				<div id="indiv">
 					<p id="formP">Student Support:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
 
 				<div id="indiv">
 					<p id="formP">Staff Support:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
 
 				<div id="indiv">	
 					<p id="formP">Community Member Support:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
 
 				<div id="indiv">
 					<p id="formP">Promotional Materials:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
 
 				<div id="indiv">
 					<p id="formP">Other:</p>
-					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize" required>
+					<span id="dollar">$</span><input onblur="findTotal()" type="text" name="Amount" id="inputSize2" required>
 					<hr id="formHr">
 				</div>
 				<br>
